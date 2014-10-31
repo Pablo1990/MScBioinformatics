@@ -1,5 +1,5 @@
 
-tam = raw_input("Tamanyo:")
+tam = input("Tamanyo:")
 cont = 0
 vector = []
 while cont < tam :
