@@ -1,0 +1,48 @@
+LOCUS       AB031069     2487 bp    mRNA            PRI       27-MAY-2000
+DEFINITION  Homo sapiens PCCX1 mRNA for protein containing CXXC domain 1,
+            complete cds.
+ACCESSION   AB031069
+VERSION     AB031069.1  GI:8100074
+        1 agatggcggc gctgaggggt cttgggggct ctaggccggc cacctactgg tttgcagcgg
+       61 agacgacgca tggggcctgc gcaataggag tacgctgcct gggaggcgtg actagaagcg
+      121 gaagtagttg tgggcgcctt tgcaaccgcc tgggacgccg ccgagtggtc tgtgcaggtt
+      181 cgcgggtcgc tggcgggggt cgtgagggag tgcgccggga gcggagatat ggagggagat
+      241 ggttcagacc cagagcctcc agatgccggg gaggacagca agtccgagaa tggggagaat
+      301 gcgcccatct actgcatctg ccgcaaaccg gacatcaact gcttcatgat cgggtgtgac
+      361 aactgcaatg agtggttcca tggggactgc atccggatca ctgagaagat ggccaaggcc
+      421 atccgggagt ggtactgtcg ggagtgcaga gagaaagacc ccaagctaga gattcgctat
+      481 cggcacaaga agtcacggga gcgggatggc aatgagcggg acagcagtga gccccgggat
+      541 gagggtggag ggcgcaagag gcctgtccct gatccagacc tgcagcgccg ggcagggtca
+      601 gggacagggg ttggggccat gcttgctcgg ggctctgctt cgccccacaa atcctctccg
+      661 cagcccttgg tggccacacc cagccagcat caccagcagc agcagcagca gatcaaacgg
+      721 tcagcccgca tgtgtggtga gtgtgaggca tgtcggcgca ctgaggactg tggtcactgt
+      781 gatttctgtc gggacatgaa gaagttcggg ggccccaaca agatccggca gaagtgccgg
+      841 ctgcgccagt gccagctgcg ggcccgggaa tcgtacaagt acttcccttc ctcgctctca
+      901 ccagtgacgc cctcagagtc cctgccaagg ccccgccggc cactgcccac ccaacagcag
+      961 ccacagccat cacagaagtt agggcgcatc cgtgaagatg agggggcagt ggcgtcatca
+     1021 acagtcaagg agcctcctga ggctacagcc acacctgagc cactctcaga tgaggaccta
+     1081 cctctggatc ctgacctgta tcaggacttc tgtgcagggg cctttgatga ccatggcctg
+     1141 ccctggatga gcgacacaga agagtcccca ttcctggacc ccgcgctgcg gaagagggca
+     1201 gtgaaagtga agcatgtgaa gcgtcgggag aagaagtctg agaagaagaa ggaggagcga
+     1261 tacaagcggc atcggcagaa gcagaagcac aaggataaat ggaaacaccc agagagggct
+     1321 gatgccaagg accctgcgtc actgccccag tgcctggggc ccggctgtgt gcgccccgcc
+     1381 cagcccagct ccaagtattg ctcagatgac tgtggcatga agctggcagc caaccgcatc
+     1441 tacgagatcc tcccccagcg catccagcag tggcagcaga gcccttgcat tgctgaagag
+     1501 cacggcaaga agctgctcga acgcattcgc cgagagcagc agagtgcccg cactcgcctt
+     1561 caggaaatgg aacgccgatt ccatgagctt gaggccatca ttctacgtgc caagcagcag
+     1621 gctgtgcgcg aggatgagga gagcaacgag ggtgacagtg atgacacaga cctgcagatc
+     1681 ttctgtgttt cctgtgggca ccccatcaac ccacgtgttg ccttgcgcca catggagcgc
+     1741 tgctacgcca agtatgagag ccagacgtcc tttgggtcca tgtaccccac acgcattgaa
+     1801 ggggccacac gactcttctg tgatgtgtat aatcctcaga gcaaaacata ctgtaagcgg
+     1861 ctccaggtgc tgtgccccga gcactcacgg gaccccaaag tgccagctga cgaggtatgc
+     1921 gggtgccccc ttgtacgtga tgtctttgag ctcacgggtg acttctgccg cctgcccaag
+     1981 cgccagtgca atcgccatta ctgctgggag aagctgcggc gtgcggaagt ggacttggag
+     2041 cgcgtgcgtg tgtggtacaa gctggacgag ctgtttgagc aggagcgcaa tgtgcgcaca
+     2101 gccatgacaa accgcgcggg attgctggcc ctgatgctgc accagacgat ccagcacgat
+     2161 cccctcacta ccgacctgcg ctccagtgcc gaccgctgag cctcctggcc cggacccctt
+     2221 acaccctgca ttccagatgg gggagccgcc cggtgcccgt gtgtccgttc ctccactcat
+     2281 ctgtttctcc ggttctccct gtgcccatcc accggttgac cgcccatctg cctttatcag
+     2341 agggactgtc cccgtcgaca tgttcagtgc ctggtggggc tgcggagtcc actcatcctt
+     2401 gcctcctctc cctgggtttt gttaataaaa ttttgaagaa accaaaaaaa aaaaaaaaaa
+     2461 aaaaaaaaaa aaaaaaaaaa aaaaaaa
+
