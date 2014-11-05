@@ -1,17 +1,31 @@
+def printAADependsOnPer(totalAminoAcids, aminoAcids) :
+	percentage=input("Percentage: ")
+	while percentage != -1 :
+		for aa in aminoAcids.items():
+			perActual=aa[1]/float(totalAminoAcids)*100
+			if(perActual >= percentage) :
+				print "Name: " + aa[0] + "\t\tPercentage: " + str(perActual) + " %"
+
+		
+		percentage=input("Percentage: ")
+
+
+
+
 nomFich = raw_input("File: ")
 
 
 #dictionary key=codon - value=aminoacid
-tabla={"ctt":"l","atg":"m","aca":"t","acg":"t","atc":"i","aac":"n",
-"ata":"i","agg":"r","cct":"p","act":"t","agc":"s","aag":"k","aga":"r",
-"cat":"h","aat":"n","att":"i","ctg":"l","cta":"l","ctc":"l","cac":"h",
-"aaa":"k","ccg":"p","agt":"s","cca":"p","caa":"q","ccc":"p","tat":"y",
-"ggt":"g","tgt":"c","cga":"r","cag":"q","tct":"s","gat":"d","cgg":"r",
-"ttt":"f","tgc":"c","ggg":"g","tag":"*","gga":"g","taa":"*","ggc":"g",
-"tac":"y","ttc":"f","tcg":"s","tta":"l","ttg":"l","tcc":"s","acc":"t",
-"tca":"s","gca":"a","gta":"v","gcc":"a","gtc":"v","gcg":"a","gtg":"v",
-"gag":"e","gtt":"v","gct":"a","tga":"*","gac":"d","cgt":"r","tgg":"w",
-"gaa":"e","cgc":"r"}
+tabla={"ctt":"Leucine","atg":"Methionine","aca":"thronine","acg":"thronine","atc":"Isoleucine","aac":"Asparagine",
+"ata":"Isoleucine","agg":"Arginine","cct":"Proline","act":"thronine","agc":"Serine","aag":"Lysine","aga":"Arginine",
+"cat":"Histidine","aat":"Asparagine","att":"Isoleucine","ctg":"Leucine","cta":"Leucine","ctc":"Leucine","cac":"Histidine",
+"aaa":"Lysine","ccg":"Proline","agt":"Serine","cca":"Proline","caa":"Glutamine","ccc":"Proline","tat":"Tyrosine",
+"ggt":"Glycine","tgt":"Cysteine","cga":"Arginine","cag":"Glutamine","tct":"Serine","gat":"AsparticAcid","cgg":"Arginine",
+"ttt":"Phenylanaline","tgc":"Cysteine","ggg":"Glycine","tag":"*","gga":"Glycine","taa":"*","ggc":"Glycine",
+"tac":"Tyrosine","ttc":"Phenylanaline","tcg":"Serine","tta":"Leucine","ttg":"Leucine","tcc":"Serine","acc":"thronine",
+"tca":"Serine","gca":"Alanine","gta":"Valine","gcc":"Alanine","gtc":"Valine","gcg":"Alanine","gtg":"Valine",
+"gag":"GlutamicAcid","gtt":"Valine","gct":"Alanine","tga":"*","gac":"AsparticAcid","cgt":"Arginine","tgg":"Tryptophane",
+"gaa":"GlutamicAcid","cgc":"Arginine"}
 
 cont=0
 
@@ -68,5 +82,4 @@ f.close()
 
 #print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
 
-percentage=input("Percentage: ")
-len(numberAminoAcids)
+printAADependsOnPer(totalAminoAcids, numberAminoAcids)
