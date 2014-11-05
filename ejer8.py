@@ -1,6 +1,7 @@
-nomFich = raw_input("Fichero: ")
-#open files
+nomFich = raw_input("File: ")
 
+
+#dictionary key=codon - value=aminoacid
 tabla={"ctt":"l","atg":"m","aca":"t","acg":"t","atc":"i","aac":"n",
 "ata":"i","agg":"r","cct":"p","act":"t","agc":"s","aag":"k","aga":"r",
 "cat":"h","aat":"n","att":"i","ctg":"l","cta":"l","ctc":"l","cac":"h",
@@ -13,12 +14,16 @@ tabla={"ctt":"l","atg":"m","aca":"t","acg":"t","atc":"i","aac":"n",
 "gaa":"e","cgc":"r"}
 
 cont=0
+
+#open file
 f = open(nomFich)
 contA = contG = contC = contT = 0;
 baseCodonNum = 0
 baseCodon = ""
 codones = []
 aminoAcidos = []
+numberAminoAcids = {}
+totalAminoAcids = 0
 for line in f:
 	#processinng
 	if(cont>4) :
@@ -41,16 +46,27 @@ for line in f:
 				baseCodonNum+=1
 
 			if baseCodonNum > 2 :
+				totalAminoAcids+=1
 				baseCodonNum = 0
 				codones.append(baseCodon)
 				aminoAcidos.append(tabla[baseCodon])
+				if (numberAminoAcids.has_key(tabla[baseCodon])):
+					numberAminoAcids[tabla[baseCodon]]+=1
+				else:
+					numberAminoAcids[tabla[baseCodon]]=1
+
 				baseCodon = ""
 
 	cont+=1
 
-print aminoAcidos
-print codones
 #closing files
 f.close()
 
-print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
+#print aminoAcidos
+#print codones
+#print numberAminoAcids
+
+#print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
+
+percentage=input("Percentage: ")
+len(numberAminoAcids)
