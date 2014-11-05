@@ -1,19 +1,11 @@
 def printAADependsOnPer(totalAminoAcids, aminoAcids) :
 	percentage=input("Percentage: ")
-	while percentage != -1 :
-		for aa in aminoAcids.items():
-			perActual=aa[1]/float(totalAminoAcids)*100
-			if(perActual >= percentage) :
-				print "Name: " + aa[0] + "\t\tPercentage: " + str(perActual) + " %"
+	for aa in aminoAcids.items():
+		perActual=aa[1]/float(totalAminoAcids)*100
+		if(perActual >= percentage) :
+			print "Name: " + aa[0] + "\t\tPercentage: " + str(perActual) + " %"
 
-		
-		percentage=input("Percentage: ")
-
-
-
-
-nomFich = raw_input("File: ")
-
+# ---------------------------------------------------------------------------- #
 
 #dictionary key=codon - value=aminoacid
 tabla={"ctt":"Leucine","atg":"Methionine","aca":"thronine","acg":"thronine","atc":"Isoleucine","aac":"Asparagine",
@@ -28,6 +20,8 @@ tabla={"ctt":"Leucine","atg":"Methionine","aca":"thronine","acg":"thronine","atc
 "gaa":"GlutamicAcid","cgc":"Arginine"}
 
 cont=0
+
+nomFich = raw_input("File: ")
 
 #open file
 f = open(nomFich)
@@ -75,11 +69,39 @@ for line in f:
 
 #closing files
 f.close()
+print "1: Contar cuantas veces aparece cada una de las bases en la cadena de DNA."
+print "2: convertir todo el DNA en aminoacidos y guardarlo en un fichero llamado amino.txt"	
+print "3: Count the differents amino acids"
+print "4: Show the amino acids that appears more than a percentege"
+print "0: Exit"
+option = input("Option: ")
+while(option != 0) :
+	print ""
+	if(option == 1) :
+		print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
+	elif (option == 2) :
+		print "Writing the file..."
+		fichEscri = open("amino.txt", "w")
+		fichEscri.write(str(aminoAcidos))
+		fichEscri.close()
+	elif (option == 3) :
+		print numberAminoAcids
+	elif (option == 4 ) :
+		printAADependsOnPer(totalAminoAcids, numberAminoAcids)
+	elif (option == 0) :
+		print "You pressed exit..."
+	else :
+		print "Wrong key"
 
-#print aminoAcidos
-#print codones
-#print numberAminoAcids
+	print ""
+	#
+	print "1: Contar cuantas veces aparece cada una de las bases en la cadena de DNA."
+	print "2: convertir todo el DNA en aminoacidos y guardarlo en un fichero llamado amino.txt"
+	print "3: Count the differents amino acids"
+	print "4: Show the amino acids that appears more than a percentege"
+	print "0: Exit"
+	option = input("Option: ")
+	#print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
 
-#print "As: " + str(contA) + " Gs: " + str(contG) + " Cs: " + str(contC) + " Ts: " + str(contT)
+	
 
-printAADependsOnPer(totalAminoAcids, numberAminoAcids)
