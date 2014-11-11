@@ -73,13 +73,13 @@ while salute!=3 :
 
 	#Do the multiplication
 	if(salute!=3) :
-		print x
-		print y
+		#print x
+		#print y
 		if(len(x[0])==len(y)) :
 			if(salute==1) :
 				print multipliMatrix(x,y)
 			else :
-				nameFile = raw_input("Introduce the name of the results file")
+				nameFile = raw_input("Introduce the name of the results file: ")
 				fichEscri = open(nameFile, "w")
 				result = multipliMatrix(x,y)
 				for item in result :
@@ -94,5 +94,7 @@ while salute!=3 :
 				fichEscri.close()
 		else :
 			print "Incompatibles matrix"
+		print "Done!"
+		print
 	else :
 		print "Well... See you!"
