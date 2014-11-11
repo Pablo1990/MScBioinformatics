@@ -18,6 +18,13 @@ def multipliMatrix(matrix1, matrix2) :
 
 	return result
 
+def readMatrix(nameFile) :
+	file1 = open(nameFile)
+	rawMatrix = file1.readLines()
+	matrix = rawMatrix.split('\n')
+	return matrix.split(' ')
+
+
 #Predefined matrix
 #x = [[1,2],[4,5],[7,8],[10,11]]
 #y = [[1,2,5],[1,2,6]]
@@ -52,9 +59,13 @@ while salute!=3 :
 			y.append(line)
 	elif (salute==2) :
 		nomFich1 = input("Introduce the name of the first file: ")
+		x = readMatrix(nomFich1)
 		nomFich2 = input("Introduce the name of the second file: ")
-	#Do the multiplication
+		y = readMatrix(nomFich2)
+		
 
+
+	#Do the multiplication
 	#print x
 	#print y
 	if(salute!=3) :
