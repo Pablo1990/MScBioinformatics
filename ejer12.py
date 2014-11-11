@@ -79,7 +79,8 @@ while salute!=3 :
 			if(salute==1) :
 				print multipliMatrix(x,y)
 			else :
-				fichEscri = open("material/results.txt", "w")
+				nameFile = raw_input("Introduce the name of the results file")
+				fichEscri = open(nameFile, "w")
 				result = multipliMatrix(x,y)
 				for item in result :
 					line = ""
