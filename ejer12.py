@@ -79,7 +79,18 @@ while salute!=3 :
 			if(salute==1) :
 				print multipliMatrix(x,y)
 			else :
-				print	
+				fichEscri = open("material/results.txt", "w")
+				result = multipliMatrix(x,y)
+				for item in result :
+					line = ""
+					cont= 0
+					for item2 in item :
+						line+=str(item2)
+						cont+=1
+						if cont < len(item) :
+							line+=" "
+					fichEscri.write(line+"\n")
+				fichEscri.close()
 		else :
 			print "Incompatibles matrix"
 	else :
