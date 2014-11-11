@@ -20,10 +20,16 @@ def multipliMatrix(matrix1, matrix2) :
 
 def readMatrix(nameFile) :
 	file1 = open(nameFile)
-	rawMatrix = file1.readLines()
+	rawMatrix = file1.read()
 	matrix = rawMatrix.split('\n')
-	return matrix.split(' ')
-
+	finalMatrix=[]
+	for i in range(len(matrix)-1):
+		line = matrix[i].split(' ')
+		definitiveLine = []
+		for item in line :
+			definitiveLine.append(int(item))
+		finalMatrix.append(definitiveLine)
+	return finalMatrix
 
 #Predefined matrix
 #x = [[1,2],[4,5],[7,8],[10,11]]
@@ -58,19 +64,22 @@ while salute!=3 :
 				line.append(input("Introduce position " + str(i) + ", " + str(j) + ": "))
 			y.append(line)
 	elif (salute==2) :
-		nomFich1 = input("Introduce the name of the first file: ")
+		nomFich1 = raw_input("Introduce the name of the first file: ")
 		x = readMatrix(nomFich1)
-		nomFich2 = input("Introduce the name of the second file: ")
+		nomFich2 = raw_input("Introduce the name of the second file: ")
 		y = readMatrix(nomFich2)
 		
 
 
 	#Do the multiplication
-	#print x
-	#print y
 	if(salute!=3) :
+		print x
+		print y
 		if(len(x[0])==len(y)) :
-			print multipliMatrix(x,y)
+			if(salute==1) :
+				print multipliMatrix(x,y)
+			else :
+				print	
 		else :
 			print "Incompatibles matrix"
 	else :
