@@ -14,16 +14,32 @@ dbname='masterdb'
 dbuser='masteruser'	
 dbpass='masterpass' 
 
-def parseHeader(line) :
+def parse(line) :
 	line = line.rstrip('\n')
 	palabras = line.split(" ")
+	finalPal = []
 	for palabra in palabras :
 		if palabra != "" :
-			print (palabra)
+			finalPal.append(palabra)
+	return finalPal
 
 if len(sys.argv)>1 :
 	for infile in sys.argv[1:]:
 		fichero = open(str(infile))
+		fheader = []
+		ftitle = []
+		fcompnd = []
 		for line in fichero :
 			if line.startswith("HEADER") :
-				parseHeader(line)
+				header = parse(line)
+				del header[0]
+				fheader.append(header)
+				print (fheader)
+			elif line.startswith("TITLE") :
+				title = parse(line)
+				del title[0]
+				print (title)
+			elif line.startswith("COMPND") :
+				compnd = parse(line)
+				del compnd[0]
+				print (compnd)
