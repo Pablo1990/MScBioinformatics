@@ -14,13 +14,16 @@ dbname='masterdb'
 dbuser='masteruser'	
 dbpass='masterpass' 
 
+def parseHeader(line) :
+	line = line.rstrip('\n')
+	palabras = line.split(" ")
+	for palabra in palabras :
+		if palabra != "" :
+			print (palabra)
+
 if len(sys.argv)>1 :
 	for infile in sys.argv[1:]:
 		fichero = open(str(infile))
 		for line in fichero :
 			if line.startswith("HEADER") :
-				line = line.rstrip('\n')
-				palabras = line.split(" ")
-				for palabra in palabras :
-					if palabra != "" :
-						print (palabra)
+				parseHeader(line)
