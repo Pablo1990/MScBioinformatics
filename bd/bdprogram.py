@@ -23,23 +23,35 @@ def parse(line) :
 			finalPal.append(palabra)
 	return finalPal
 
+def parsecompnd(comp) :
+	print ("Parseando voyyyyy parseando vengo engo")
+
 if len(sys.argv)>1 :
 	for infile in sys.argv[1:]:
 		fichero = open(str(infile))
-		fheader = []
 		ftitle = []
 		fcompnd = []
 		for line in fichero :
 			if line.startswith("HEADER") :
 				header = parse(line)
 				del header[0]
-				fheader.append(header)
-				print (fheader)
+				print (header)
 			elif line.startswith("TITLE") :
 				title = parse(line)
 				del title[0]
+				ftitle.append(title)
 				print (title)
 			elif line.startswith("COMPND") :
 				compnd = parse(line)
 				del compnd[0]
-				print (compnd)
+				if compnd[0] != 'MOL_ID:':
+					del compnd[0]
+				fcompnd.append(compnd)
+			else :
+				if fcompnd != [] :
+					parsecompnd(fcompnd)
+					#fcompnd.clear()
+				else
+					#if lo siguiente
+
+	print (fcompnd)
