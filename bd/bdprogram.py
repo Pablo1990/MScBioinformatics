@@ -51,7 +51,8 @@ if len(sys.argv)>1 :
 				if fcompnd != [] :
 					parsecompnd(fcompnd)
 					#fcompnd.clear()
-				else
+				else :
 					#if lo siguiente
+					print ("culo")
 
 	print (fcompnd)
