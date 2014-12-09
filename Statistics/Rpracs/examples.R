@@ -1,2 +1,10 @@
-x <- 9
-2 * x
+hi <- read.table("Additional_files_R-bioinfo-intro/hit-table-500-text.txt")
+head(hi)
+str(hi)
+hist(hit[, 5])
+hist(hi[, 5])
+plot (hi[,13]~hi[, 3])
+
+par(mfrow = c(1,2))
+hist(hi[,5], breaks=50, xlab="", main="Alignment length")
+plot(hi[,13]~hi[,3], xlab="Percent. identity", ylab="Bit sore")
