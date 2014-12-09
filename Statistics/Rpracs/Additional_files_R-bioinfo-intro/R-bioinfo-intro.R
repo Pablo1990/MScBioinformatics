@@ -194,7 +194,7 @@ stripchart(GeneB ~ Type, vertical = TRUE, pch = 1)
 
 
 ## ------------------------------------------------------------------------
-load("anage.RData")
+load("Additional_files_R-bioinfo-intro/anage.RData")
 ls() ## a new anage object is present
 
 
