@@ -308,18 +308,18 @@ for(i in 1:6) {
 
 
 ## ----eval=FALSE----------------------------------------------------------
-## X <- read.table("hit-table-500-text.txt")
-## head(X)
-## ## We could save what we care about in variables
-## ## with better names
-## align.length <- X[, 5]
-## score <- X[, 13]
+X <- read.table("Additional_files_R-bioinfo-intro/hit-table-500-text.txt")
+head(X)
+## We could save what we care about in variables
+## with better names
+align.length <- X[, 5]
+score <- X[, 13]
 ## 
 
 
 ## ------------------------------------------------------------------------
-another.data.set <- read.table("AnotherDataSet.txt", 
-                               header = TRUE)
+another.data.set <- read.table("Additional_files_R-bioinfo-intro/AnotherDataSet.txt", 
+                               header = TRUE) #the header is important
 summary(another.data.set)
 
 

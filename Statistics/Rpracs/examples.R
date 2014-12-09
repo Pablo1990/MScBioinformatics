@@ -30,3 +30,25 @@ rm(list = ls()) # clear the enviroment
 
 
 rainbow(nlevels(anage$Class))[anage$Class]
+
+
+pdf(file = "m1.pdf", height = 4, width = 4)
+#all of the instructions since this point will be writed on the m1 file
+plot(1:5, col = "blue")
+#until I wrote the next instruction
+dev.off()
+
+is.na(vector)
+
+getwd()
+ls()
+setwd()
+
+write.table(anther.data.set, file = "unfichero.txt", quote= FALSE, row.names = FALSE, sep = "@")
+
+source("file", echo = TRUE, max.deparse.length = 988999999) 
+#execute the "file", echo= print all the instructions, max.deparse.length = the max number of instructions
+
+#Terminal time:
+# nohup R CMD BATCH executing file
+#executing files on background. You must do this, if you run some scripts for a long time.
