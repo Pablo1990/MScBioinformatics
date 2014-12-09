@@ -28,3 +28,5 @@ t.test(GeneB ~ Type)
 
 rm(list = ls()) # clear the enviroment
 
+
+rainbow(nlevels(anage$Class))[anage$Class]

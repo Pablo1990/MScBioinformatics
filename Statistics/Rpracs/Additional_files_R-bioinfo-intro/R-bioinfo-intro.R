@@ -229,7 +229,7 @@ scatterplot(Metabolic.rate..W. ~ Body.mass..g.|Class, log="xy",
 
 
 ## ------------------------------------------------------------------------
-anage$logMetab <- log(anage$Metabolic.rate..W.)
+anage$logMetab <- log(anage$Metabolic.rate..W.) #We add the two atributes (logMetab, logBodyMass) to "anage"
 anage$logBodyMass <- log(anage$Body.mass..g.)
 
 
@@ -246,7 +246,8 @@ birds <- anage[anage$Class == "Aves", ]
 
 
 ## ------------------------------------------------------------------------
-summary(lm1)
+summary(lm1) #the object (Intercept) seems to be not relevant.
+#In this case, the relevant one is logBodyMass, and it represents the slope.
 
 
 ## ------------------------------------------------------------------------
