@@ -52,3 +52,6 @@ source("file", echo = TRUE, max.deparse.length = 988999999)
 #Terminal time:
 # nohup R CMD BATCH executing file
 #executing files on background. You must do this, if you run some scripts for a long time.
+
+# & check all the elements of the operator like: 1 & 2
+# && it works like a dead short, if the first element is false, the next elements doesn't get evelauted
