@@ -30,7 +30,7 @@ rm(list = ls())
 
 
 ## ------------------------------------------------------------------------
-dp53 <- read.table("P53.txt", header = TRUE)
+dp53 <- read.table("Additional_files_R-basic-stats/P53.txt", header = TRUE)
 
 
 ## ------------------------------------------------------------------------
@@ -47,7 +47,7 @@ op <- par(mfrow = c(2, 2)) ## to show 2 by 2 on the same figure
 Boxplot(p53 ~ cond, data = dp53, id.method = "y")
 plotMeans(dp53$p53, dp53$cond, error.bars = "se", 
   xlab = "Condition", ylab = "P53 expression levels")
-stripchart(p53 ~ cond, vertical = TRUE, method = "jitter", 
+stripchart(p53 ~ cond, vertical = TRUE, method = "jitter", #jitter helps you understand the data
   ylab = "p53", data = dp53)
 densityPlot(p53 ~ cond, data = dp53, bw = "SJ", adjust = 1, 
   kernel = "gaussian")
@@ -108,7 +108,7 @@ write.table(dmyc, file = "MYC.txt", col.names = TRUE,
 
 
 ## ------------------------------------------------------------------------
-dmyc <- read.table("MYC.txt", header = TRUE)
+dmyc <- read.table("Additional_files_R-basic-stats/MYC.txt", header = TRUE)
 
 
 ## ------------------------------------------------------------------------
@@ -214,7 +214,7 @@ rm(dbrca)
 
 
 ## ----echo=FALSE, results = 'hide'----------------------------------------
-dbrca <- read.table("BRCA2.txt", header = TRUE)
+dbrca <- read.table("Additional_files_R-basic-stats/BRCA2.txt", header = TRUE)
 
 
 ## ------------------------------------------------------------------------
@@ -249,7 +249,7 @@ rm(list = ls())
 
 
 ## ------------------------------------------------------------------------
-dmit <- read.table("MIT.txt", header = TRUE)
+dmit <- read.table("Additional_files_R-basic-stats/MIT.txt", header = TRUE)
 
 
 ## ------------------------------------------------------------------------

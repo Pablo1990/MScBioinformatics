@@ -55,3 +55,5 @@ source("file", echo = TRUE, max.deparse.length = 988999999)
 
 # & check all the elements of the operator like: 1 & 2
 # && it works like a dead short, if the first element is false, the next elements doesn't get evelauted
+
+all.equal(sqrt(2)*sqrt(2), 2) # != sqrt(2)* sqrt(2) == 2 (is not equal)
