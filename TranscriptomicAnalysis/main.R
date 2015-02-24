@@ -7,10 +7,7 @@ comment
 "
 dataFiles <- list.files(path="./data", full.names=TRUE, recursive=TRUE)
 data <- c()
-dataFiles[1]
-file <- as.character(dataFiles[1])
-justRMA(filename=dataFiles[1])
 for(dataFile in dataFiles) {
-  data <- c(data,justRMA(dataFile))
+  data <- c(data,just.rma(dataFile))
 }
 
