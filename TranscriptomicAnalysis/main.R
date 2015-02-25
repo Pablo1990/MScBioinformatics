@@ -8,7 +8,7 @@ normalizeData <- function(directoryName) {
   #You can find this data in http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18198
 
   #Do it with just one directory from one gse, with all, will blow up
-  dataFiles <- list.celfiles(path=paste("./data/RawData/",directoryName, sep = ""), full.names=TRUE, recursive=TRUE)
+  dataFiles <- list.celfiles(path=directoryName, full.names=TRUE, recursive=TRUE)
   
   #From Rma
   "data <- c()
@@ -50,4 +50,13 @@ normalizeData <- function(directoryName) {
   
   #6.Filtrar los datos por IQR.
   esetIQR <- varFilter(eset, var.func=IQR, var.cutoff=0.5, filterByQuantile=TRUE) 
+  
+  return esetIQR
+}
+
+fileDirs <- list.dirs(path = './data/RawData')
+
+data <- c()
+for (dir in fileDirs[-1]) {
+  data <- c(data, normalizeData(dir))
 }
