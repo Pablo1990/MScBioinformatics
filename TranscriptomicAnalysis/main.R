@@ -56,6 +56,8 @@ normalizeData <- function(directoryName) {
 
 fileDirs <- list.dirs(path = './data/RawData')
 
+targets18198 <- readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names="FileName") 
+targets18351 <- readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName")
 data <- c()
 for (dir in fileDirs[-1]) {
   data <- c(data, normalizeData(dir))
