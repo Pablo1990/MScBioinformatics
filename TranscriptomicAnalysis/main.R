@@ -16,11 +16,15 @@ targets18198 <- readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names
 targets18351 <- readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName")
 data <- c()
 for (dir in fileDirs[-1]) {
-  aux <- normalizeData(dir)
-  print (dir)
-  normalizedData <- c(normalizedData, aux)
+  data <- c(data, normalizeData(dir))
 }
 
-differentialExpression(targets18198, normalizedData[1])
-differentialExpression(targets18351, normalizedData[2])
+#change this to see what we are looking for
+design18198<-cbind(Control=c(1,1,1,1,1,1,0,0,0,0,0,0), Cases=c(0,0,0,0,0,0,1,1,1,1,1,1))
+#design18198<-cbind(Control=c(1,1,1,0,0,0,1,1,1,0,0,0), Cases=c(0,0,0,1,1,1,0,0,0,1,1,1))
+differentialExpression(targets18198, data[1], design18198)
+
+
+design18352<-cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1))
+differentialExpression(targets18351, data[2])
 

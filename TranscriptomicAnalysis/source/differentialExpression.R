@@ -1,11 +1,9 @@
 #######Differential expression analysis.#######
-differentialExpression <- function(targets, esetIQR){
+differentialExpression <- function(targets, esetIQR, design){
   #7. Matriz de diseño.
-  design<-cbind(Control=c(1,1,1,1,1,0,0,0,0,0), Nanog_RNAi=c(0,0,0,0,0,1,1,1,1,1))
   rownames(design)<-targets$FileName
-  
   #8. Matriz de contraste.
-  cont.matrix<-makeContrasts(Nanog_RNAivsControl=Nanog_RNAi-Control,levels=design) 
+  cont.matrix<-makeContrasts(CasesvsControl=Cases-Control,levels=design) 
   
   
   #9. Obtener genes diferencialmente expresados 
