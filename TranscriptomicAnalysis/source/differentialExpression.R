@@ -1,9 +1,5 @@
 #######Differential expression analysis.#######
-differentialExpression <- function(targets, esetIQR, design){
-  #7. Matriz de diseño.
-  rownames(design)<-targets$FileName
-  #8. Matriz de contraste.
-  cont.matrix<-makeContrasts(CasesvsControl=Cases-Control,levels=design) 
+differentialExpression <- function(targets, esetIQR, design, cont.matrix){
   
   
   #9. Obtener genes diferencialmente expresados 

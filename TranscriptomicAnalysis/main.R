@@ -12,21 +12,37 @@ source("source/normalizeData.R")
 
 fileDirs <- list.dirs(path = './data/RawData')
 
-targets18198 <- readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names="FileName") 
-targets18351 <- readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName")
+targets <- list(readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names="FileName"))
+targets <- list(targets, readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName"))
+
+
+# Caso 18198 --------------------------------------------------------------
 
 #change this to see what we are looking for
-design <-list(cbind(Control=c(1,1,1,1,1,1,0,0,0,0,0,0), Cases=c(0,0,0,0,0,0,1,1,1,1,1,1)))
+design18198 <-cbind(Control=c(1,1,1,1,1,1,0,0,0,0,0,0), Cases=c(0,0,0,0,0,0,1,1,1,1,1,1))
 #design18198<-cbind(Control=c(1,1,1,0,0,0,1,1,1,0,0,0), Cases=c(0,0,0,1,1,1,0,0,0,1,1,1))
 
-design<-list(design, cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1)))
+rownames(design18198)<-targets[1]$FileName
 
-data <- c()
-dataDiff <- c()
-cont <- 1
-for (dir in fileDirs[-1]) {
-  aux <- normalizeData(dir)
-  data <- c(data, aux)
-  dataDiff <- c(dataDiff, aux, design[cont])
-  cont <- 2
-}
+cont.matrix18198 <- makeContrasts(CasesvsControl=Cases-Control,levels=design18198)
+
+data18198 <- normalizeData(dir[1])
+
+dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198)
+
+
+# Caso 18351 --------------------------------------------------------------
+
+design18351 <-list(design, cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1)))
+
+
+
+rownames(design18351)<-targets[1]$FileName
+
+cont.matrix<-makeContrasts(CasesvsControl=Cases-Control,levels=design18351) 
+
+data18351 <- normalizeData(dir[1])
+
+dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351)
+
+
