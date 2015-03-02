@@ -1,5 +1,5 @@
 #######Differential expression analysis.#######
-differentialExpression <- function(targets){
+differentialExpression <- function(targets, esetIQR){
   #7. Matriz de diseño.
   design<-cbind(Control=c(1,1,1,1,1,0,0,0,0,0), Nanog_RNAi=c(0,0,0,0,0,1,1,1,1,1))
   rownames(design)<-targets$FileName
@@ -16,4 +16,6 @@ differentialExpression <- function(targets){
   
   #Lista de genes diferencialmente expresados (topTable por defecto da los 10 mejores segun pvalor, ajustar number para obtener todos los genes)
   toptableIQR<-topTable(fit2, number=dim(exprs(esetIQR))[1], adjust.method="BH", sort.by="p")
+  
+  return (toptableIQR)
 }

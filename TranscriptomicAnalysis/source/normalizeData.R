@@ -43,5 +43,5 @@ normalizeData <- function(directoryName) {
   #6.Filtrar los datos por IQR.
   esetIQR <- varFilter(eset, var.func=IQR, var.cutoff=0.5, filterByQuantile=TRUE) 
   
-  return esetIQR
+  return (esetIQR)
 }

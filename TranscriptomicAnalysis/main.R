@@ -16,5 +16,11 @@ targets18198 <- readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names
 targets18351 <- readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName")
 data <- c()
 for (dir in fileDirs[-1]) {
-  data <- c(data, normalizeData(dir))
+  aux <- normalizeData(dir)
+  print (dir)
+  normalizedData <- c(normalizedData, aux)
 }
+
+differentialExpression(targets18198, normalizedData[1])
+differentialExpression(targets18351, normalizedData[2])
+
