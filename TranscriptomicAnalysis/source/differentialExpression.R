@@ -1,7 +1,6 @@
 #######Differential expression analysis.#######
 differentialExpression <- function(targets, esetIQR, design, cont.matrix){
   
-  
   #9. Obtener genes diferencialmente expresados 
   #Modelo lineal y eBayes 
   fit<-lmFit(esetIQR,design)  ##getting DEGs from IQR 

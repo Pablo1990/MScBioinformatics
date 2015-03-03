@@ -1,8 +1,10 @@
 #source("http://bioconductor.org/biocLite.R")
+#biocLite("ArrayTools")
 
 library("affy")
 library("limma")
 library("genefilter")
+library("ArrayTools")
 
 source("source/differentialExpression.R")
 source("source/normalizeData.R")
@@ -30,6 +32,9 @@ data18198 <- normalizeData(fileDirs[2])
 
 dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198, cont.matrix18198)
 
+#createGSEAFiles(eSet = data18198, catVar="sample")
+
+#output.gct(normal, filename = "probe")
 
 # Caso 18351 --------------------------------------------------------------
 
@@ -43,4 +48,5 @@ data18351 <- normalizeData(fileDirs[3])
 
 dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, cont.matrix18351)
 
+#createGSEAFiles(eSet = data18351, catVar="sample")
 
