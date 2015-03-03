@@ -32,7 +32,11 @@ data18198 <- normalizeData(fileDirs[2])
 
 dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198, cont.matrix18198)
 
-#createGSEAFiles(eSet = data18198, catVar="sample")
+setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW/")
+
+createGSEAFiles(eSet = data18198[rownames(dataDiff18198)], catVar="sample")
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis")
 
 #output.gct(normal, filename = "probe")
 
@@ -48,5 +52,10 @@ data18351 <- normalizeData(fileDirs[3])
 
 dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, cont.matrix18351)
 
-#createGSEAFiles(eSet = data18351, catVar="sample")
+#data18351[rownames(dataDiff18351)]
 
+setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/")
+
+createGSEAFiles(eSet = data18351[rownames(dataDiff18351)], catVar="sample")
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis")
