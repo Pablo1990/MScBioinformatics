@@ -12,7 +12,7 @@ source("source/normalizeData.R")
 #You can find this data in http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18198
 
 
-fileDirs <- list.dirs(path = './data/RawData')
+fileDirs <- list.dirs(path = './data/RawData', recursive = FALSE)
 
 targets <- list(readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names="FileName"))
 targets <- list(targets, readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName"))
@@ -28,13 +28,13 @@ rownames(design18198)<-targets[1]$FileName
 
 cont.matrix18198 <- makeContrasts(CasesvsControl=Cases-Control,levels=design18198)
 
-data18198 <- normalizeData(fileDirs[2])
+data18198 <- normalizeData(fileDirs[1])
 
 dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198, cont.matrix18198)
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW/")
 
-createGSEAFiles(eSet = data18198[rownames(dataDiff18198)], catVar="sample")
+createGSEAFiles(eSet = data18198[rownames(dataDiff18198[1:100,])], catVar="sample")
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis")
 
@@ -48,10 +48,12 @@ rownames(design18351) <- targets[2]$FileName
 
 cont.matrix18351 <- makeContrasts(CasesvsControl=Cases-Control,levels=design18351) 
 
-data18351 <- normalizeData(fileDirs[3])
+data18351 <- normalizeData(fileDirs[2])
 
 #Volver a comprobar esta expresión diferencial con babelomics, geneToR, asterias...
 dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, cont.matrix18351)
+
+
 
 #Probar esto
 #design = cbind(mean=1,diff=cl)  		##generamos la matriz de diseño
@@ -63,6 +65,6 @@ dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, c
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/")
 
-createGSEAFiles(eSet = data18351[rownames(dataDiff18351)], catVar="sample")
+createGSEAFiles(eSet = data18351[rownames(dataDiff18351[1:100,])], catVar="sample")
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis")
