@@ -4,6 +4,13 @@ He probado babelomics, pero nno tengo mucha idea de cómo utilizarlo, y no me da
 
 Para este dataset hay que ejecutarlo con el chipset: Mouse430_2
 
+Clase 0: LDP_Vehicle (Control)
+Clase 1: LdP_Sahm1 (Caso)
+
+Con 500 genes: 
+Aunque no encuentra buenos genes, vemos que el heat_map, es bastante significativo: 
+file:///home/bioinfo/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/GSEA_Results/500Genes_C2Reactome_2Classes_GeneSet.Gsea.1426441143767/heat_map_corr_plot.html
+
 
 Para la geneset DB C2 Kegg:
 
@@ -17,10 +24,26 @@ Para la geneset DB C2 Biocarta:
 Para la geneset DB C2 Reactome:
 
 - Con 500 volvemos a encontrar solo uno. Pero al cambiar el tipo de permutación a "gene_set", encuentra tres más.
-Aunque no encuentra buenos genes, vemos que el heat_map, es bastante significativo: 
-file:///home/bioinfo/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/GSEA_Results/500Genes_C2Reactome_2Classes_GeneSet.Gsea.1426441143767/heat_map_corr_plot.html
 
+Para la genesetDB C6 Oncogenic:
 
+- Con 500 encontramos 3, y con la permutación por gene_set, también.
+
+Para la genesetDB C5 GO ALL:
+
+- Con 500 encontramos 40, 36 de la Clase 0, y 4 de la Clase 1.
+
+Para la genesetDB C4 Computational ALL:
+
+- Con 500 encontramos 27, pero están más repartidos que con otros. 17 - 9. Parecen que dan resultados medio-qué.
+
+Para la genesetDB C3 Motifs ALL:
+
+- Con 500 encontramos 39, pero 38 a 1. Y muy malos.
+
+Para la genesetDB C7 Immunologic:
+
+- Con 500 encontramos 38, 22 a 16. Pero en los snapshot no salen muy buenos resultados. Aunque a lo mejor, añadiendo más, puede ser prometedor.
 
 GSE18198
 --------
