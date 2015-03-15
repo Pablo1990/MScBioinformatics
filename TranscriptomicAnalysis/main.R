@@ -54,10 +54,10 @@ data18351 <- normalizeData(fileDirs[3])
 dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, cont.matrix18351)
 
 #Probar esto
-design = cbind(mean=1,diff=cl)  		##generamos la matriz de diseño
-fit = lmFit(exprs(ALL),design)			##ajustamos el modelo lineal con los datos de ALL segun matriz de diseño
-fit2 = eBayes(fit)						##test bayesiano sobre el modelo lineal ajustado
-res<-topTable(fit2, coef="diff", adjust.method = "fdr", sort.by="p")  ##salida de resultados
+#design = cbind(mean=1,diff=cl)  		##generamos la matriz de diseño
+#fit = lmFit(exprs(ALL),design)			##ajustamos el modelo lineal con los datos de ALL segun matriz de diseño
+#fit2 = eBayes(fit)						##test bayesiano sobre el modelo lineal ajustado
+#res<-topTable(fit2, coef="diff", adjust.method = "fdr", sort.by="p")  ##salida de resultados
 
 #data18351[rownames(dataDiff18351)]
 
