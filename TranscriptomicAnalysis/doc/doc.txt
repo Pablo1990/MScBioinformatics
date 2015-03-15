@@ -2,6 +2,27 @@ GSE18351
 --------
 He probado babelomics, pero nno tengo mucha idea de cómo utilizarlo, y no me da resultados muy comprensibles.
 
+Para este dataset hay que ejecutarlo con el chipset: Mouse430_2
+
+
+Para la geneset DB C2 Kegg:
+
+- Con 100 no encontramos nada
+- Y con 500 encontramos algo, pero solo encuentra un enriched gene, en los 500 más representativos.
+
+Para la geneset DB C2 Biocarta:
+
+- Ni con 100, ni con 500 no encontramos nada. Esto puede indicar que no estamos haciendolo demasiado bien.
+
+Para la geneset DB C2 Reactome:
+
+- Con 500 volvemos a encontrar solo uno. Pero al cambiar el tipo de permutación a "gene_set", encuentra tres más.
+Aunque no encuentra buenos genes, vemos que el heat_map, es bastante significativo: 
+file:///home/bioinfo/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/GSEA_Results/500Genes_C2Reactome_2Classes_GeneSet.Gsea.1426441143767/heat_map_corr_plot.html
+
+
 
 GSE18198
 --------
+
+Chipset: U133 plus 2.0
