@@ -65,7 +65,11 @@ Para la genesetDB C7 Immunologic:
 
 --- Hay que probar con todos los genes
 
+Como no nos dan resultados diferencialmente expresados, vamos a utilizar GSEA
+
 GSE18198
 --------
 
 Chipset: U133 plus 2.0
+
+Como no nos dan resultados diferencialmente expresados, vamos a utilizar GSEA
