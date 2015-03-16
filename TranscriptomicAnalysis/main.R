@@ -34,7 +34,7 @@ dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198, c
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW/")
 
-createGSEAFiles(eSet = data18198[rownames(dataDiff18198[1:500,])], catVar="sample")
+createGSEAFiles(eSet = data18198[rownames(dataDiff18198)], catVar="sample")
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis")
 
@@ -65,6 +65,6 @@ dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, c
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18351_RAW/")
 
-createGSEAFiles(eSet = data18351[rownames(dataDiff18351[1:500,])], catVar="sample")
+createGSEAFiles(eSet = data18351[rownames(dataDiff18351)], catVar="sample")
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis")

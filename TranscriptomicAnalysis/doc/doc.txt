@@ -1,3 +1,16 @@
+Hacer preguntas como: ¿los datos estan bien? 
+Tenemos que dar respuestas como si fueran los datos nos dan por una persona de un laboratorio, y no sabe nada.
+
+La selección de datos
+
+Probar shiny.
+
+Intentar ver redes.
+
+Hacer clustering.
+
+PCA.
+
 GSE18351
 --------
 He probado babelomics, pero nno tengo mucha idea de cómo utilizarlo, y no me da resultados muy comprensibles.
@@ -6,6 +19,9 @@ Para este dataset hay que ejecutarlo con el chipset: Mouse430_2
 
 Clase 0: LDP_Vehicle (Control)
 Clase 1: LdP_Sahm1 (Caso)
+
+
+---- Esto no está bien.
 
 Con 500 genes: 
 Aunque no encuentra buenos genes, vemos que el heat_map, es bastante significativo: 
@@ -44,6 +60,8 @@ Para la genesetDB C3 Motifs ALL:
 Para la genesetDB C7 Immunologic:
 
 - Con 500 encontramos 38, 22 a 16. Pero en los snapshot no salen muy buenos resultados. Aunque a lo mejor, añadiendo más, puede ser prometedor.
+
+--- Hay que probar con todos los genes
 
 GSE18198
 --------
