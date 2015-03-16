@@ -9,6 +9,8 @@ Intentar ver redes.
 
 Hacer clustering.
 
+Buscar el geneset de Notch. Y otros interesantes.
+
 PCA.
 
 GSE18351
