@@ -1,9 +1,15 @@
 anotateBestGenes <- function(){
-  library("hgu95av2.db")
+  library("hgu133plus2.db")
+  library("annotate")
   
-  data18198ALL.best<-subset(data18198ALL, dataDiff18198ALL$adj.P.Val<=0.05)
+  data18198ALL.best<-subset(data18198ALL, dataDiff18198ALL$adj.P.Val<=0.01)
   probenames.fdr.005<-as.character(rownames(data18198ALL.best))
   
-  library("annotate")
-  GeneSymbol2.fdr.005<-getSYMBOL(probenames.fdr.005,"hgu95av2.db")
+  
+  GeneSymbol2.fdr.005<-getSYMBOL(probenames.fdr.005,"hgu133plus2.db")
+  
+  finalGenes <- GeneSymbol2.fdr.005[!is.na(GeneSymbol2.fdr.005)]
+  
+  #list.GeneSymbol.fdr.005<-mget(probenames.fdr.005, hgu133plus2SYMBOL)
+  #char.GeneSymbol.fdr.005<- as.character(list.GeneSymbol.fdr.005)
 }
