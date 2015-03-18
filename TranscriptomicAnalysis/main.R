@@ -16,9 +16,11 @@ fileDirs <- list.dirs(path = './data/RawData', recursive = FALSE)
 
 targets <- list(readTargets("./data/RawData/GSE18198_RAW/targets.txt", row.names="FileName"))
 targets <- list(targets, readTargets("./data/RawData/GSE18351_RAW/targets.txt", row.names="FileName"))
+targets <- list(targets, readTargets("./data/RawData/GSE18198_RAW_KOPT-K1/targets.txt", row.names="FileName"))
+targets <- list(targets, readTargets("./data/RawData/GSE18198_RAW_T_ALL/targets.txt", row.names="FileName"))
 
 
-# Caso 18198 --------------------------------------------------------------
+# Caso 18198 all cell lines --------------------------------------------------------------
 
 #change this to see what we are looking for
 design18198 <-cbind(Control=c(1,1,1,1,1,1,0,0,0,0,0,0), Cases=c(0,0,0,0,0,0,1,1,1,1,1,1))
@@ -30,7 +32,7 @@ cont.matrix18198 <- makeContrasts(CasesvsControl=Cases-Control,levels=design1819
 
 data18198 <- normalizeData(fileDirs[1])
 
-dataDiff18198 <- differentialExpression(targets[cont], data18198, design18198, cont.matrix18198)
+dataDiff18198 <- differentialExpression(targets[1], data18198, design18198, cont.matrix18198)
 
 setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW/")
 
@@ -40,6 +42,44 @@ setwd("~/MScBioinformatics/TranscriptomicAnalysis")
 
 #output.gct(normal, filename = "probe")
 
+# Caso 18198 KOPT K1 --------------------------------------------------------------
+
+#change this to see what we are looking for
+design <- cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1))
+
+rownames(design)<-targets[3]$FileName
+
+cont.matrix18198K1 <- makeContrasts(CasesvsControl=Cases-Control,levels=design)
+
+data18198K1 <- normalizeData(fileDirs[2])
+
+dataDiff18198K1 <- differentialExpression(targets[3], data18198K1, design, cont.matrix18198K1)
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW_KOPT-K1//")
+
+createGSEAFiles(eSet = data18198K1[rownames(dataDiff18198K1)], catVar="sample")
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis")
+
+# Caso 18198 HPB ALL --------------------------------------------------------------
+
+#change this to see what we are looking for
+design <- cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1))
+
+rownames(design18198)<-targets[4]$FileName
+
+cont.matrix18198ALL <- makeContrasts(CasesvsControl=Cases-Control,levels=design)
+
+data18198ALL <- normalizeData(fileDirs[3])
+
+dataDiff18198ALL <- differentialExpression(targets[4], data18198ALL, design, cont.matrix18198ALL)
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis/data/RawData/GSE18198_RAW_T_ALL/")
+
+createGSEAFiles(eSet = data18198ALL[rownames(dataDiff18198ALL)], catVar="sample")
+
+setwd("~/MScBioinformatics/TranscriptomicAnalysis")
+
 # Caso 18351 --------------------------------------------------------------
 
 design18351 <- cbind(Control=c(1,1,1,0,0,0), Cases=c(0,0,0,1,1,1))
@@ -48,10 +88,10 @@ rownames(design18351) <- targets[2]$FileName
 
 cont.matrix18351 <- makeContrasts(CasesvsControl=Cases-Control,levels=design18351) 
 
-data18351 <- normalizeData(fileDirs[2])
+data18351 <- normalizeData(fileDirs[4])
 
 #Volver a comprobar esta expresión diferencial con babelomics, geneToR, asterias...
-dataDiff18351 <- differentialExpression(targets[cont], data18351, design18351, cont.matrix18351)
+dataDiff18351 <- differentialExpression(targets[2], data18351, design18351, cont.matrix18351)
 
 
 
