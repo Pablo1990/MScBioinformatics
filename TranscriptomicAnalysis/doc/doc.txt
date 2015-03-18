@@ -75,3 +75,7 @@ Chipset: U133 plus 2.0
 Como no nos dan resultados diferencialmente expresados, vamos a utilizar GSEA
 
 Replicando los resultados como lo hacen en el paper, vemos que dan básicamente los mismo resultados en la carpeta: C3_TFT_GeneSet
+
+Cuando los separamos por lineas celulares, y comprobamos cada unos, vemos que hay mínimo 1000 en cada uno con FDR muy buenos.
+
+Ahora habría que anotar con genesymbol.
