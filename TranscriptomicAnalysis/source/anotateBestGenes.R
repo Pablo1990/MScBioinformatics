@@ -10,6 +10,8 @@ anotateBestGenes <- function(){
   
   finalGenes <- GeneSymbol2.fdr.005[!is.na(GeneSymbol2.fdr.005)]
   
+  #now scrapping to look for the genes with annotation?
+  
   #list.GeneSymbol.fdr.005<-mget(probenames.fdr.005, hgu133plus2SYMBOL)
   #char.GeneSymbol.fdr.005<- as.character(list.GeneSymbol.fdr.005)
 }
