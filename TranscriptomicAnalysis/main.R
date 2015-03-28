@@ -9,6 +9,7 @@ library("annotate")
 
 source("source/differentialExpression.R")
 source("source/normalizeData.R")
+source("source/anotateBestGenes.R")
 
 #You can find this data in http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18198
 
@@ -56,6 +57,8 @@ data18198K1 <- normalizeData(fileDirs[2])
 
 dataDiff18198K1 <- differentialExpression(targets[3], data18198K1, design, cont.matrix18198K1)
 
+finalGenesK1 <- anotateBestGenesHuman(data18198K1, dataDiff18198K1, 0.01)
+
 # Caso 18198 HPB ALL --------------------------------------------------------------
 
 #change this to see what we are looking for
@@ -69,7 +72,7 @@ data18198ALL <- normalizeData(fileDirs[3])
 
 dataDiff18198ALL <- differentialExpression(targets[4], data18198ALL, design, cont.matrix18198ALL)
 
-
+finalGenesALL <- anotateBestGenesHuman(data18198ALL, dataDiff18198ALL, 0.01)
 
 # Caso 18351 --------------------------------------------------------------
 

@@ -9,7 +9,7 @@ anotateBestGenesHuman <- function(data , dataDiff, fdr){
   
   finalGenes <- GeneSymbol2.fdr[!is.na(GeneSymbol2.fdr)]
   
-  return finalGenes
+  return (finalGenes)
   #now scrapping to look for the genes with annotation?
   
   #list.GeneSymbol.fdr.005<-mget(probenames.fdr.005, hgu133plus2SYMBOL)

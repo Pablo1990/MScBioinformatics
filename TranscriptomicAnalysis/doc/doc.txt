@@ -78,4 +78,4 @@ Replicando los resultados como lo hacen en el paper, vemos que dan básicamente 
 
 Cuando los separamos por lineas celulares, y comprobamos cada unos, vemos que hay mínimo 1000 en cada uno con FDR muy buenos.
 
-Ahora habría que anotar con genesymbol.
+Ahora habría que anotar con genesymbol. Los anotamos, y para cada linea celular nos quedamos con los genes anotados con un fdr menor de 0.01
