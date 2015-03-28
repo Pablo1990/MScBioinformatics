@@ -59,6 +59,10 @@ dataDiff18198K1 <- differentialExpression(targets[3], data18198K1, design, cont.
 
 finalGenesK1 <- anotateBestGenesHuman(data18198K1, dataDiff18198K1, 0.01)
 
+annotationsGenesK1 <- unique(finalGenesK1)
+
+writeLines(annotationsGenesK1, "data/RawData/GSE18198_RAW_KOPT-K1/annotationsGenes.txt")
+
 # Caso 18198 HPB ALL --------------------------------------------------------------
 
 #change this to see what we are looking for
@@ -73,6 +77,10 @@ data18198ALL <- normalizeData(fileDirs[3])
 dataDiff18198ALL <- differentialExpression(targets[4], data18198ALL, design, cont.matrix18198ALL)
 
 finalGenesALL <- anotateBestGenesHuman(data18198ALL, dataDiff18198ALL, 0.01)
+
+annotationsGenesALL <- unique(finalGenesALL)
+
+writeLines(annotationsGenesALL, "data/RawData/GSE18198_RAW_T_ALL/annotationsGenes.txt")
 
 # Caso 18351 --------------------------------------------------------------
 

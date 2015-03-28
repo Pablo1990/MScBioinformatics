@@ -7,6 +7,8 @@ anotateBestGenesHuman <- function(data , dataDiff, fdr){
   
   GeneSymbol2.fdr<-getSYMBOL(probenames.fdr,"hgu133plus2.db")
   
+  #lookUp(probenames.fdr, "hgu133plus2.db", "SYMBOL")
+  
   finalGenes <- GeneSymbol2.fdr[!is.na(GeneSymbol2.fdr)]
   
   return (finalGenes)
