@@ -100,5 +100,8 @@ En la red del KOPT_K1:
 
 - Pero aún mejor!! Vemos que el babelomics nos lo ordena por la centralidad, y observamos que en ambas tenemos TP53 (o p53)!! :O
 
+Si en este gsn, no utilizaramos elementos externos, no tendríamos conexiones. Pero, sin lugar para buscar conexiones, queremos información externa y relaciones externas.
+
+Fatigo. salen cosas interesantes.
 
 
