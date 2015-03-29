@@ -1,9 +1,10 @@
 anotateBestGenesHuman <- function(data , dataDiff, fdr){
   library("hgu133plus2.db")
   
-  data.best<-subset(data, dataDiff$adj.P.Val<=fdr)
-  probenames.fdr<-as.character(rownames(data.best))
-  
+  #data[rownames(dataDiff[dataDiff$adj.P.Val<=0.01, ])]
+  data.best <- rownames(dataDiff[dataDiff$adj.P.Val<=0.01, ])
+  #data.best<-subset(data, dataDiff$adj.P.Val<=fdr)
+  probenames.fdr<-as.character(data.best)
   
   GeneSymbol2.fdr<-getSYMBOL(probenames.fdr,"hgu133plus2.db")
   

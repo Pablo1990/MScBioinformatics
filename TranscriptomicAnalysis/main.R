@@ -63,6 +63,14 @@ annotationsGenesK1 <- unique(finalGenesK1)
 
 writeLines(annotationsGenesK1, "data/RawData/GSE18198_RAW_KOPT-K1/annotationsGenes.txt")
 
+finalGenesK1[finalGenesK1=="HDAC9"]
+
+dataDiff18198K1[rownames(dataDiff18198K1)=="1552760_at", ]
+
+finalGenesK1["209921_at"] #Debería estar y está.
+
+finalGenesK1["1552760_at"] #No debería estar, y está
+
 # Caso 18198 HPB ALL --------------------------------------------------------------
 
 #change this to see what we are looking for
@@ -81,6 +89,10 @@ finalGenesALL <- anotateBestGenesHuman(data18198ALL, dataDiff18198ALL, 0.01)
 annotationsGenesALL <- unique(finalGenesALL)
 
 writeLines(annotationsGenesALL, "data/RawData/GSE18198_RAW_T_ALL/annotationsGenes.txt")
+
+finalGenesALL[finalGenesALL=="HDAC9"]
+
+dataDiff18198ALL[rownames(dataDiff18198ALL)=="1552760_at", ]
 
 # Caso 18351 --------------------------------------------------------------
 

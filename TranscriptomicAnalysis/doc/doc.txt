@@ -78,4 +78,34 @@ Replicando los resultados como lo hacen en el paper, vemos que dan básicamente 
 
 Cuando los separamos por lineas celulares, y comprobamos cada unos, vemos que hay mínimo 1000 en cada uno con FDR muy buenos.
 
-Ahora habría que anotar con genesymbol. Los anotamos, y para cada linea celular nos quedamos con los genes anotados con un fdr menor de 0.01
+Ahora habría que anotar con genesymbol. Los anotamos, y para cada linea celular nos quedamos con los genes anotados con un fdr menor de 0.01.
+
+Ahora nos quedamos con los genes que nos han dado en cada linea y veremos que ha salido en cada una de ella, y como están enriquezidas.
+
+Con estos datos nos vamos a babelomics y vamos a buscar como podrían estar relacionados o con un pathway parecidos.
+
+En la red los azules, son los nuestros, los otros son los que ha puesto babelomics. Todos los valores calculados para los datos dan buenos pvalues
+(centralidad, network topology, so on)
+
+Ahora analizamos con cytoscape las redes para una mejor visualización y en busca de nodos importantes (con una alta centralidad y/o hub).
+
+En la red del T_ALL:
+
+- Encontramos que tenemos nodos que presentaron buen fdr y alta centralidad y/o hub:
+ 	- En un subgrafo: PTPN1 (que está lo encontramos en nuestro array)
+	- En el otro tenemos varios nodos asociados con TP53, como por ejemplo: scamp1, hipk1
+
+- Pero aún mejor!! Vemos que el babelomics nos lo ordena por la centralidad, y observamos que en ambas tenemos TP53 (o p53)!! :O
+
+- Comprueba que el hdac9 de bien, porque parece que están dando cosas raras. Comprobar que la función annotatedGenes vaya y probar el otro método annotated.
+
+ dataDiff[rownames(dataDiff)=="1552760_at", ]
+                  logFC  AveExpr           t   P.Value adj.P.Val         B
+1552760_at 0.0002645544 3.390211 0.002044747 0.9983964 0.9992747 -6.438324
+
+No sé si puedo creerme los datos que da este programa.
+
+El problema parece ser el subset. El subset va igual, que el otro.
+
+final <- data[dataDiff$adj.P.Val<=0.001] esto va igual.
+
