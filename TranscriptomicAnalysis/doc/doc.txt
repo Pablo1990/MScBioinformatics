@@ -92,20 +92,13 @@ Ahora analizamos con cytoscape las redes para una mejor visualización y en busc
 En la red del T_ALL:
 
 - Encontramos que tenemos nodos que presentaron buen fdr y alta centralidad y/o hub:
- 	- En un subgrafo: PTPN1 (que está lo encontramos en nuestro array)
-	- En el otro tenemos varios nodos asociados con TP53, como por ejemplo: scamp1, hipk1
+	- En el otro tenemos varios nodos asociados con TP53, como por ejemplo: JUN y mdm2
+
+En la red del KOPT_K1:
+
+- Encontramos BRAC1 y NFKB2, con una alta centralidad y grado de nodos.
 
 - Pero aún mejor!! Vemos que el babelomics nos lo ordena por la centralidad, y observamos que en ambas tenemos TP53 (o p53)!! :O
 
-- Comprueba que el hdac9 de bien, porque parece que están dando cosas raras. Comprobar que la función annotatedGenes vaya y probar el otro método annotated.
 
- dataDiff[rownames(dataDiff)=="1552760_at", ]
-                  logFC  AveExpr           t   P.Value adj.P.Val         B
-1552760_at 0.0002645544 3.390211 0.002044747 0.9983964 0.9992747 -6.438324
-
-No sé si puedo creerme los datos que da este programa.
-
-El problema parece ser el subset. El subset va igual, que el otro.
-
-final <- data[dataDiff$adj.P.Val<=0.001] esto va igual.
 
