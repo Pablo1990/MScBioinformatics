@@ -1,0 +1,74 @@
+NAME	PROBE	GENE SYMBOL	GENE_TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	NRP1	NRP1	neuropilin 1	988	0.11072064936161041	-0.048097108	No	
+row_1	GATM	GATM	glycine amidinotransferase (L-arginine:glycine amidinotransferase)	1188	0.10243194550275803	-0.03945866	No	
+row_2	ONECUT2	ONECUT2	one cut domain, family member 2	1287	0.09859530627727509	-0.024192264	No	
+row_3	UNC13B	UNC13B	unc-13 homolog B (C. elegans)	1638	0.08706751465797424	-0.030288603	No	
+row_4	FBXO32	FBXO32	F-box protein 32	1869	0.08119168132543564	-0.028811457	No	
+row_5	USP32	USP32	ubiquitin specific peptidase 32	2000	0.07800155133008957	-0.02063282	No	
+row_6	KIF1B	KIF1B	kinesin family member 1B	2046	0.07704146951436996	-0.0063573397	No	
+row_7	STRN	STRN	striatin, calmodulin binding protein	2094	0.07583385705947876	0.007493337	No	
+row_8	PPP1R10	PPP1R10	protein phosphatase 1, regulatory subunit 10	2534	0.06675494462251663	-0.009862163	No	
+row_9	TCF7L1	TCF7L1	transcription factor 7-like 1 (T-cell specific, HMG-box)	3160	0.05509533733129501	-0.04370603	No	
+row_10	ASXL1	ASXL1	additional sex combs like 1 (Drosophila)	3216	0.054150767624378204	-0.035408787	No	
+row_11	ELF4	ELF4	E74-like factor 4 (ets domain transcription factor)	3493	0.04954409971833229	-0.044587772	No	
+row_12	CLPX	CLPX	ClpX caseinolytic peptidase X homolog (E. coli)	3707	0.04637468606233597	-0.049810026	No	
+row_13	ARF3	ARF3	ADP-ribosylation factor 3	3858	0.044105496257543564	-0.050869666	No	
+row_14	PIK3CG	PIK3CG	phosphoinositide-3-kinase, catalytic, gamma polypeptide	3867	0.0440032072365284	-0.041400574	No	
+row_15	ESRRG	ESRRG	estrogen-related receptor gamma	4175	0.03961646556854248	-0.055153653	No	
+row_16	CACNB3	CACNB3	calcium channel, voltage-dependent, beta 3 subunit	4179	0.03959488123655319	-0.04632119	No	
+row_17	NOVA1	NOVA1	neuro-oncological ventral antigen 1	4451	0.035859305411577225	-0.05825835	No	
+row_18	SOX4	SOX4	SRY (sex determining region Y)-box 4	4656	0.03357032313942909	-0.065740176	No	
+row_19	JARID2	JARID2	jumonji, AT rich interactive domain 2	4945	0.029804838821291924	-0.08032528	No	
+row_20	HOXB7	HOXB7	homeobox B7	5012	0.029025930911302567	-0.07859153	No	
+row_21	KLF12	KLF12	Kruppel-like factor 12	5015	0.02897178940474987	-0.072114274	No	
+row_22	NAP1L5	NAP1L5	nucleosome assembly protein 1-like 5	5127	0.02766364999115467	-0.07403606	No	
+row_23	ODF2	ODF2	outer dense fiber of sperm tails 2	5308	0.025590306147933006	-0.08155947	No	
+row_24	USH1G	USH1G	Usher syndrome 1G (autosomal recessive)	5344	0.02522939443588257	-0.07839036	No	
+row_25	PIK3R1	PIK3R1	phosphoinositide-3-kinase, regulatory subunit 1 (p85 alpha)	5352	0.025120750069618225	-0.073165394	No	
+row_26	IRX3	IRX3	iroquois homeobox protein 3	5470	0.0237728338688612	-0.07642288	No	
+row_27	CHN2	CHN2	chimerin (chimaerin) 2	5518	0.02325376868247986	-0.07459732	No	
+row_28	OTP	OTP	orthopedia homolog (Drosophila)	5626	0.021907657384872437	-0.077538274	No	
+row_29	TLE4	TLE4	transducin-like enhancer of split 4 (E(sp1) homolog, Drosophila)	5675	0.02122471109032631	-0.076251075	No	
+row_30	NDST3	NDST3	N-deacetylase/N-sulfotransferase (heparan glucosaminyl) 3	5783	0.020033620297908783	-0.079620615	No	
+row_31	EDN1	EDN1	endothelin 1	6255	0.015088357962667942	-0.11117027	No	
+row_32	TCF3	TCF3	transcription factor 3 (E2A immunoglobulin enhancer binding factors E12/E47)	6285	0.014819934032857418	-0.10993595	No	
+row_33	NIPBL	NIPBL	Nipped-B homolog (Drosophila)	6785	0.00923831108957529	-0.14490421	No	
+row_34	NCALD	NCALD	neurocalcin delta	6809	0.00896693579852581	-0.1445626	No	
+row_35	TTC12	TTC12	tetratricopeptide repeat domain 12	6901	0.007773491553962231	-0.14954709	No	
+row_36	DICER1	DICER1	Dicer1, Dcr-1 homolog (Drosophila)	6960	0.007100128103047609	-0.1522333	No	
+row_37	SCML1	SCML1	sex comb on midleg-like 1 (Drosophila)	6989	0.006746189668774605	-0.15277115	No	
+row_38	CNTNAP5	CNTNAP5	contactin associated protein-like 5	7126	0.005006828345358372	-0.16173233	No	
+row_39	GRIA3	GRIA3	glutamate receptor, ionotrophic, AMPA 3	7193	0.004331864416599274	-0.16564615	No	
+row_40	CISH	CISH	cytokine inducible SH2-containing protein	7213	0.004182730335742235	-0.16610146	No	
+row_41	SATB1	SATB1	special AT-rich sequence binding protein 1 (binds to nuclear matrix/scaffold-associating DNA's)	7299	0.003064930671826005	-0.17171691	No	
+row_42	WISP1	WISP1	WNT1 inducible signaling pathway protein 1	7411	0.001565636252053082	-0.17960735	No	
+row_43	FAM91A1	FAM91A1	family with sequence similarity 91, member A1	7703	-0.002011725679039955	-0.2007717	No	
+row_44	ANKRD12	ANKRD12	ankyrin repeat domain 12	7963	-0.005094640888273716	-0.21885304	No	
+row_45	B3GAT3	B3GAT3	beta-1,3-glucuronyltransferase 3 (glucuronosyltransferase I)	8307	-0.00943078938871622	-0.2421848	No	
+row_46	ZNF238	ZNF238	zinc finger protein 238	8595	-0.013391983695328236	-0.26044923	No	
+row_47	NFATC4	NFATC4	nuclear factor of activated T-cells, cytoplasmic, calcineurin-dependent 4	8632	-0.014025087468326092	-0.25991687	No	
+row_48	PHF20L1	PHF20L1	PHD finger protein 20-like 1	8829	-0.01688341423869133	-0.27062052	No	
+row_49	KIAA2013	KIAA2013	KIAA2013	9121	-0.02114047296345234	-0.2874101	No	
+row_50	SH2D1A	SH2D1A	SH2 domain protein 1A, Duncan's disease (lymphoproliferative syndrome)	9288	-0.023979054763913155	-0.29426166	No	
+row_51	HCFC2	HCFC2	host cell factor C2	9485	-0.027376245707273483	-0.3025656	No	
+row_52	GCNT2	GCNT2	glucosaminyl (N-acetyl) transferase 2, I-branching enzyme (I blood group)	9906	-0.03424212709069252	-0.3259449	No	
+row_53	NEUROD4	NEUROD4	neurogenic differentiation 4	10234	-0.04104379191994667	-0.34085777	No	
+row_54	TRIM69	TRIM69	tripartite motif-containing 69	10689	-0.050484128296375275	-0.3630491	No	
+row_55	OTOP2	OTOP2	otopetrin 2	10892	-0.055391956120729446	-0.36539164	Yes	
+row_56	FIGN	FIGN	fidgetin	11051	-0.05877833068370819	-0.36369008	Yes	
+row_57	TFAP2A	TFAP2A	transcription factor AP-2 alpha (activating enhancer binding protein 2 alpha)	11173	-0.06269370764493942	-0.35834357	Yes	
+row_58	PRR11	PRR11	proline rich 11	11278	-0.06594397127628326	-0.35099044	Yes	
+row_59	IGSF21	IGSF21	immunoglobin superfamily, member 21	11348	-0.06780204176902771	-0.3406115	Yes	
+row_60	FIGF	FIGF	c-fos induced growth factor (vascular endothelial growth factor D)	11696	-0.07792636752128601	-0.34857547	Yes	
+row_61	CNOT2	CNOT2	CCR4-NOT transcription complex, subunit 2	12202	-0.09720905125141144	-0.36387062	Yes	
+row_62	SYNPO2L	SYNPO2L	synaptopodin 2-like	12230	-0.09857864677906036	-0.34333196	Yes	
+row_63	NOG	NOG	noggin	12433	-0.10872482508420944	-0.33347726	Yes	
+row_64	TAGLN3	TAGLN3	transgelin 3	12737	-0.12770073115825653	-0.32678813	Yes	
+row_65	NECAP1	NECAP1	NECAP endocytosis associated 1	12805	-0.13262559473514557	-0.30143532	Yes	
+row_66	SAMD11	SAMD11	sterile alpha motif domain containing 11	12814	-0.13323678076267242	-0.27155843	Yes	
+row_67	ANKS1B	ANKS1B	ankyrin repeat and sterile alpha motif domain containing 1B	12831	-0.134629487991333	-0.2419575	Yes	
+row_68	CREB5	CREB5	cAMP responsive element binding protein 5	12833	-0.1347910314798355	-0.21120496	Yes	
+row_69	GPR22	GPR22	G protein-coupled receptor 22	13036	-0.15245677530765533	-0.19134872	Yes	
+row_70	KLHL4	KLHL4	kelch-like 4 (Drosophila)	13166	-0.16763585805892944	-0.1625963	Yes	
+row_71	HRK	HRK	harakiri, BCL2 interacting protein (contains only BH3 domain)	13521	-0.3453998565673828	-0.109909005	Yes	
+row_72	FLRT3	FLRT3	fibronectin leucine rich transmembrane protein 3	13527	-0.4828539490699768	1.4864396E-4	Yes	

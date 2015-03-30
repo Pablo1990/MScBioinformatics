@@ -1,0 +1,28 @@
+NAME	PROBE	GENE SYMBOL	GENE_TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	GNGT2	GNGT2	guanine nucleotide binding protein (G protein), gamma transducing activity polypeptide 2	511	0.1424887329339981	0.03348391	No	
+row_1	ZNF593	ZNF593	zinc finger protein 593	762	0.12324286252260208	0.07666272	No	
+row_2	ACACA	ACACA	acetyl-Coenzyme A carboxylase alpha	939	0.11357390135526657	0.12048167	No	
+row_3	NSD1	NSD1	nuclear receptor binding SET domain protein 1	1423	0.09333113580942154	0.13143177	No	
+row_4	ROCK2	ROCK2	Rho-associated, coiled-coil containing protein kinase 2	3069	0.05649816244840622	0.037888985	No	
+row_5	FBLN2	FBLN2	fibulin 2	3387	0.05122075602412224	0.04005293	No	
+row_6	BCL11A	BCL11A	B-cell CLL/lymphoma 11A (zinc finger protein)	3631	0.047395315021276474	0.045782194	No	
+row_7	PTCHD1	PTCHD1	patched domain containing 1	4067	0.041156966239213943	0.034169585	No	
+row_8	LMO3	LMO3	LIM domain only 3 (rhombotin-like 2)	5187	0.026902811601758003	-0.03523381	No	
+row_9	MLL5	MLL5	myeloid/lymphoid or mixed-lineage leukemia 5 (trithorax homolog, Drosophila)	6234	0.015338758938014507	-0.10501976	No	
+row_10	IKZF2	IKZF2	IKAROS family zinc finger 2 (Helios)	6721	0.01001943089067936	-0.13599621	No	
+row_11	IL1RAPL1	IL1RAPL1	interleukin 1 receptor accessory protein-like 1	7283	0.0032452517189085484	-0.17591801	No	
+row_12	TGM4	TGM4	transglutaminase 4 (prostate)	7820	-0.003284895559772849	-0.21396855	No	
+row_13	SEZ6	SEZ6	seizure related 6 homolog (mouse)	8625	-0.013939188793301582	-0.26653314	No	
+row_14	FGF4	FGF4	fibroblast growth factor 4 (heparin secretory transforming protein 1, Kaposi sarcoma oncogene)	8704	-0.014995213598012924	-0.2648033	No	
+row_15	B2M	B2M	beta-2-microglobulin	9134	-0.021442027762532234	-0.2858405	No	
+row_16	MTSS1	MTSS1	metastasis suppressor 1	11068	-0.059447240084409714	-0.39923564	Yes	
+row_17	TFAP2A	TFAP2A	transcription factor AP-2 alpha (activating enhancer binding protein 2 alpha)	11173	-0.06269370764493942	-0.37555426	Yes	
+row_18	MYLK	MYLK	myosin, light chain kinase	11176	-0.0627564862370491	-0.34428757	Yes	
+row_19	KLF7	KLF7	Kruppel-like factor 7 (ubiquitous)	11710	-0.07833337038755417	-0.344548	Yes	
+row_20	APLN	APLN	apelin, AGTRL1 ligand	12145	-0.0952533707022667	-0.32900682	Yes	
+row_21	PGF	PGF	placental growth factor, vascular endothelial growth factor-related protein	12192	-0.09702196717262268	-0.283846	Yes	
+row_22	IL13RA1	IL13RA1	interleukin 13 receptor, alpha 1	12545	-0.11521891504526138	-0.2522377	Yes	
+row_23	BMF	BMF	Bcl2 modifying factor	12806	-0.1326385736465454	-0.20509614	Yes	
+row_24	NFIA	NFIA	nuclear factor I/A	13068	-0.156393364071846	-0.14613742	Yes	
+row_25	BRSK1	BRSK1	BR serine/threonine kinase 1	13099	-0.15962247550487518	-0.06845494	Yes	
+row_26	ITGB8	ITGB8	integrin, beta 8	13355	-0.20021815598011017	0.012886053	Yes	

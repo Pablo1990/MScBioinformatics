@@ -69,9 +69,9 @@ finalGenesK1[finalGenesK1=="HDAC9"]
 
 dataDiff18198K1[rownames(dataDiff18198K1)=="1552760_at", ]
 
-finalGenesK1["209921_at"] #Debería estar y está.
+finalGenesK1["209921_at"] #Debería estar
 
-finalGenesK1["1552760_at"] #No debería estar, y está
+finalGenesK1["1552760_at"] #No debería estar
 
 # Caso 18198 HPB ALL --------------------------------------------------------------
 
