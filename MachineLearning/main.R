@@ -17,28 +17,23 @@ dataNormalized <- backgroundCorrect(data, method="normexp")
 
 #ENorm <- normalizeBetweenArrays(data, method="quantile")
 
-#write.csv(dataNormalized$E, "aux.csv")
-
-#attributes <- colnames(dataNormalized$E)
-
 attributesStr <- "@RELATION asthma\n"
 
 for (att in 1:length(row.names(dataNormalized$genes))){
-  if(!dataNormalized$genes$ControlType[att])
+  if(!dataNormalized$genes$ControlType[att]){
     attributesStr <- paste(c(attributesStr,paste(c('@ATTRIBUTE', dataNormalized$genes$ProbeName[att] , 'numeric'), collapse = ' ')), collapse='\n')
+  }
 }
-
 attributesStr <- paste(c(attributesStr, '@ATTRIBUTE class\t{mma, sa}'))
 
+dataNormalizedT <- t(dataNormalized$E)
 
+dataStr <- "@DATA"
+
+for (d in 1:length(row.names(dataNormalizedT))){
+  dataStr <- paste(c(dataStr, paste(c(dataNormalizedT[d,],dataNormalized$targets$Classes[d]), collapse=',')), collapse='\n')
+}
 
 fileConn<-file("final.arff")
-writeLines(attributesStr, fileConn)
+writeLines(paste(c(attributesStr, dataStr), collapse='\n'), fileConn)
 close(fileConn)
-
-
-
-
-#tableData <- read.csv("aux.csv")
-
-#write.arff(dataNormalized$E ,file = "aux.arff")
