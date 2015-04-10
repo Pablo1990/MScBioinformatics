@@ -27,13 +27,14 @@ for (att in attributes){
   attributesStr <- paste(c(attributesStr,paste(c('@ATTRIBUTE', att, 'numeric'), collapse = ' ')), collapse='\n')
 }
 
+attributesStr <- paste(c(attributesStr, '@ATTRIBUTE class\t{control, mma, sa}'))
+
+classes <- dataNormalized$genes$ControlType
+
 fileConn<-file("final.arff")
 writeLines(attributesStr, fileConn)
 close(fileConn)
 
-for (dato in dataNormalized$E){
-  
-}
 
 
 
