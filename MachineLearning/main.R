@@ -21,17 +21,20 @@ attributesStr <- "@RELATION asthma\n"
 
 for (att in 1:length(row.names(dataNormalized$genes))){
   if(!dataNormalized$genes$ControlType[att]){
-    attributesStr <- paste(c(attributesStr,paste(c('@ATTRIBUTE', dataNormalized$genes$ProbeName[att] , 'numeric'), collapse = ' ')), collapse='\n')
+    attributesStr <- paste(c(attributesStr,paste(c('@ATTRIBUTE', dataNormalized$genes$ProbeName[att] , 'REAL'), collapse = ' ')), collapse='\n')
   }
 }
-attributesStr <- paste(c(attributesStr, '@ATTRIBUTE class\t{mma, sa}'))
+attributesStr <- paste(c(attributesStr, '@ATTRIBUTE class {Control, MMA, SA}'))
 
-dataNormalizedT <- t(dataNormalized$E)
+#Filter the control genes
+dataNormalizedF <- dataNormalized$E[as.integer(row.names(dataNormalized$genes[dataNormalized$genes$ControlType==0,])),]
+
+dataNormalizedT <- t(dataNormalizedF)
 
 dataStr <- "@DATA"
 
 for (d in 1:length(row.names(dataNormalizedT))){
-  dataStr <- paste(c(dataStr, paste(c(dataNormalizedT[d,],dataNormalized$targets$Classes[d]), collapse=',')), collapse='\n')
+    dataStr <- paste(c(dataStr, paste(c(dataNormalizedT[d,],dataNormalized$targets$Classes[d]), collapse=',')), collapse='\n')
 }
 
 fileConn<-file("final.arff")
