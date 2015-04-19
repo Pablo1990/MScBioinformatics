@@ -130,7 +130,8 @@ We had these problems mentioned before because the initial dataset had, approxim
 	\centering
 	\begin{tabular}{c r r r}
 		\hline\hline
-		Method & Univariate & Multivariate & Wrapper\\ [0.2ex]
+		& \multicolumn{2}{c}{Multivariate} & \\
+		Method & CFS Best first & CFS Genetic & Wrapper\\ [0.2ex]
 		%heading
 		\hline
 		Naive Bayes & 0.623 & 0.599 & 0.74 \\
@@ -164,6 +165,25 @@ We had these problems mentioned before because the initial dataset had, approxim
 %Mostrar la clasificación entre los bien clasificados de una y otra clase, porque así se podrá ver, que una clase es más fácil de clasificar que otra.
 
 Another important thing which showed up with the output of the results was the classification between one class and the other ones.
+
+\begin{table}[h]
+	\caption{Some examples of the difference between classes. Measured by the ROC curve.}
+	\centering
+	\begin{tabular}{c r r r r}
+		\hline\hline
+		& \multicolumn{4}{c}{Classes} \\
+		Method - Filter & Control & MMA & SA & Overall\\ [0.2ex]
+		%heading
+		\hline 
+		KNN (k=1) - Gain ratio & 0.642 & 0.589 & 0.717 & 0.644 \\
+		Bayesian Net - Gain ratio \& CFS & 0.802 & 0.591 & 0.697 & 0.667 \\
+		Logistic - Wrapper & 0.82 & 0.755 & 0.829 & 0.793 \\
+		Decision Tree - No filter & 0.55 & 0.473 & 0.471 & 0.486\\
+		Naive Bayes - CFS Best first & 0.766 & 0.534 & 0.664 & 0.623 \\ [1ex]
+		\hline
+	\end{tabular}
+	\label{table:inClassResults}
+\end{table}
 
 
 \section{Discussion}
