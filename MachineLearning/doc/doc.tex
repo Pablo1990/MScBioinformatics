@@ -109,8 +109,8 @@ In this section we'll show all the results we get from the expression set used. 
 \centering
 \begin{tabular}{c r r r r}
 \hline\hline
- & & \multicolumn{3}{c}{FSS} \\
-Method & No filter & Univariate & Multivariate & Wrapper\\ [0.2ex]
+ & & \multicolumn{3}{|c}{FSS} \\
+Method & No filter & \multicolumn{1}{|c}{text}Univariate & Multivariate & Wrapper\\ [0.2ex]
 %heading
 \hline
 Naive Bayes & 0.436 & 0.626 & 0.623 & 0.731 \\
@@ -162,6 +162,25 @@ We had these problems mentioned before because the initial dataset had, approxim
 	\label{table:knnResults}
 \end{table}
 
+\begin{table}[h]
+	\caption{Best results on the complementary methods.}
+	\centering
+	\begin{tabular}{c r r r r r r}
+		\hline\hline
+		& & \multicolumn{2}{c|}{FSS} & \multicolumn{3}{c}{Filtered by gain ratio}\\
+		Method & No filter & Univariate & \multicolumn{1}{c|}{CFS} & CFS & CFS (genetic) & Wrapper\\ [0.2ex]
+		%heading
+		\hline
+		Adaboost (random forest) & 0.573 & 0.801 & 0.795 & 0.798 & 0.829 & 0.835 \\
+		Adaboost (J48) & 0.544 & 0.758 & 0.736 & 0.736 & 0.8 & X \\
+		Multilayer perceptron & X* & 0.788 & 0.792 & 0.778 & 0.697 & 0.83 \\
+		RBF Network & 0.393 & 0.675 & 0.726 & 0.726 & 0.693 & X\\
+		Random forest & 0.569 & 0.811 & 0.783 & 0.803 & 0.809 & 0.843 \\ [1ex]
+		\hline
+	\end{tabular}
+	\label{table:basicsResults}
+\end{table}
+
 %Mostrar la clasificación entre los bien clasificados de una y otra clase, porque así se podrá ver, que una clase es más fácil de clasificar que otra.
 
 Another important thing which showed up with the output of the results was the classification between one class and the other ones.
@@ -184,6 +203,7 @@ Another important thing which showed up with the output of the results was the c
 	\end{tabular}
 	\label{table:inClassResults}
 \end{table}
+
 
 
 \section{Discussion}
