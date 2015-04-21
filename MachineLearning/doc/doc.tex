@@ -76,20 +76,16 @@ A practical problem with this simple method is that it tends to be slow for larg
 
 \subsubsection{Logistic regression}
 
-stic regression
-defined as pðC 1⁄4 1jxÞ 1⁄4 1=1⁄21 þ e􏰁ð􏰉0þ i1⁄41 􏰉ixiÞ􏰄; where x represents an instance to be classified, and 􏰉0, 􏰉1, . . . , 􏰉n are the parameters of the model. These parameters should be estimated from the data in order to obtain a concrete model.
 
-\subsubsection{Bayesian Networks: TAN}
+\begin{equation}
+	P(C = 1 | x) = \frac{1}{1 + e^{-(\beta_{0} + \Sigma^{n}_{i=1} \beta_{i} x_{i})}}
+	\label{eq:logistic}
+\end{equation}
 
-\subsection{Filter selection subset}
+Where $x$ represents an instance to be classified, and $\beta_0, \beta_1, \dots , \beta_n$ are the parameters of the model. These parameters should be estimated from the data in order to obtain a concrete model.
 
-Bioinformatics-2007-Saeys.pdf
+\subsubsection{Bayesian Networks, TAN}
 
-\subsubsection{Univariate}
-
-\subsubsection{Multivariate}
-
-\subsubsection{Wrapper}
 
 \subsection{Complementary}
 
@@ -112,6 +108,16 @@ If you are familiar with propositional logic, you may have noticed that the four
 \subsubsection{RBF Network}
 
 Other kernel functions can be used instead to implement different nonlinear mappings. Two that are often suggested are the radial basis function (RBF) kernel and the sigmoid kernel. Which one produces the best results depends on the application, although the differences are rarely large in practice. It is interesting to note that a support vector machine with the RBF kernel is simply a type of neural network called an RBF network (which we describe later)
+
+\subsection{Filter selection subset}
+
+Bioinformatics-2007-Saeys.pdf
+
+\subsubsection{Univariate}
+
+\subsubsection{Multivariate}
+
+\subsubsection{Wrapper}
 
 \section{Results}
 
