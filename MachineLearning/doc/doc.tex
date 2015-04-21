@@ -48,13 +48,22 @@ But it's not just a problem of the (unlogically) called "first world". It also a
 
 \subsection{Dataset}
 
-Bronchial Epithelial Cells were isolated processed as described (Chu et al., 2002 and Zhao et al., 2011). The objective of the study was to identify differentially expressed genes between normal control (NC), mild-moderate asthmatic (MMA) and severe asthmatic (SA) patients.
+The dataset chosen is the one used by Voraphani N. (2014)\cite{voraphani2014}, in which the main purpose was to identify differentially expressed genes. These genes belongs to different subjects with different classes:
 
-Overall design	Isolated fresh bronchial epithelial cells were placed into trizol for further analysis.
+\begin{itemize}
+	\item Control: Subjects with no asthma.
+	
+	\item MMA: Subjects with mild-moderate asthma.
+	
+	\item SA: severe asthmatic patients.
+\end{itemize}
 
-	Asthma
-	Organism	Homo sapiens
-	Experiment type	Expression profiling by array
+All of these classes represent an expression array with bronchial epithelial cells of Homo Sapiens.
+\\
+Because we get an expression file, we had to convert it to an arff file (used by weka \cite{weka}). In order to get this file, we have to do some operations before we could some research about it. The first thing, and the most important thing, you must do when you get an expression file, is the normalization of the data. With R and bioconductor \cite{bionductor} (citation here), this purpose is solved. We do the normalization with the background of the array with R.
+We could, also, have done differential expression in order to obtain just a few genes (differentially expressed over the others).
+\\
+After all of this, we obtain 43377 (without array controls) genes and 108 subjects. With this dataset we'll do all of the classification's problems.
 
 \section{Methods}
 
@@ -203,7 +212,7 @@ We had these problems mentioned before because the initial dataset had, approxim
 		Random forest & 0.569 & 0.811 & 0.783 & 0.803 & 0.809 & 0.843 \\ [1ex]
 		\hline
 	\end{tabular}
-	\label{table:basicsResults}
+	\label{table:complementaryResults}
 \end{table}
 
 %Mostrar la clasificación entre los bien clasificados de una y otra clase, porque así se podrá ver, que una clase es más fácil de clasificar que otra.
@@ -215,8 +224,8 @@ Another important thing which showed up with the output of the results was the c
 	\centering
 	\begin{tabular}{c r r r r}
 		\hline\hline
-		& \multicolumn{4}{c}{Classes} \\
-		Method - Filter & Control & MMA & SA & Overall\\ [0.2ex]
+		& \multicolumn{3}{c|}{Classes} & \\
+		Method - Filter & Control & MMA & SA & \multicolumn{1}{|c}{Overall}\\ [0.2ex]
 		%heading
 		\hline 
 		KNN (k=1) - Gain ratio & 0.642 & 0.589 & 0.717 & 0.644 \\
