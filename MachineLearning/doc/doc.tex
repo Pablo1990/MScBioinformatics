@@ -7,6 +7,9 @@
 	\IEEEauthorblockA{Bioinformatics MSc\\
 		Email: pablovm1990@gmail.com}
 }
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -168,16 +171,17 @@ We had these problems mentioned before because the initial dataset had, approxim
 \begin{table}[h]
 	\caption{Results depending the K value on the KNN classifier}
 	\centering
-	\begin{tabular}{c r r r}
+	\begin{tabular}{c r r}
 		\hline\hline
 		K & Univariate & Multivariate\\ [0.2ex]
 		%heading
 		\hline
-		1 & \\
-		2 & \\
-		3 & \\
-		4 & \\
-		8 &  \\ [1ex]
+		1 & 0.644 & 0.67\\
+		2 & 0.735 & 0.72\\
+		3 & 0.73 & 0.745\\
+		4 & 0.744 & 0.773\\
+		5 & 0.762 & 0.807\\
+		8 & 0.77 & 0.771 \\ [1ex]
 		\hline
 	\end{tabular}
 	\label{table:knnResults}
