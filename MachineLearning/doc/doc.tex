@@ -67,13 +67,17 @@ After all of this, we obtain 43377 (without array controls) genes and 108 subjec
 
 \section{Methods}
 
-The methods are statistics and bla bla
+As said before, the main purpose is classify well and see which genes could contribute more than others We'll analyze these genes so as to see if any of those important genes to our classification problem, have the same relevancy in biology, and, being more specific, in asthma.
 
-\subsection{Why machine learning \& statistics algorithms?}
-
-Brief Bioinform-2006-Larrañaga-86-112.pdf
+Why machine learning \& statistics and not other methods? Well, machine learning and statistics are so powerful. That could be a double-edged sword, but in this case it is not. Although, machine learning, by now, is widely used in the field of bioinformatics and biology.
 
 \subsection{Supervised classification}
+
+In a classification problem, we have a set of elements divided into classes \cite{machineBioinfo}. Given an element (or instance) of the set, a class is assigned according to some of the element's features and a set of classification rules. In our case, we have three classes (Control, MMA, SA) and 108 instances (subjects with asthma or not). Our subjects are labelled with their own class. So we proceed to divide the dataset in two subsets: the training dataset and the test dataset. The training one will be the input (labelled as well) of the classifier. The classifier learn to classify this training dataset, and the output will be a model. With this model, we run again the classifier, but, at this time, we input the test dataset without labels (i.e. no classes). After all of this procedure, we'll obtain a percentage of how good is our classifier.
+
+In order to reduce the bias with the division of the dataset (in training and test), we'll execute the k-fold-cross-validation \cite{CrossValidation}. In this case, the dataset is partitioned into k folds. Each fold is left out of the design process and used as a testing set. The estimate of the error is the overall proportion of the errors committed on all folds.
+
+We've used several paradigms (classifiers) to see which could be fitted more to our data. In the next subsections, they are going to be explained.
 
 \subsubsection{Naive Bayes}
 
@@ -135,7 +139,7 @@ Bioinformatics-2007-Saeys.pdf
 
 %The results themselves. 
 
-In this section we'll show all the results we get from the expression set used. The software used to get all of those results is weka \cite{weka}. 
+In this section we'll show all the results we get from the expression set used. The software used to get all of those results is weka \cite{weka}. And all of the results are compared by the ROC curve \cite{ROC}, which is a trusty measure.
 
 \begin{table}[h]
 \caption{*: The X values means no results could be obtained due to computational problems. **The K used here is equal to one.}
@@ -263,7 +267,13 @@ Another important thing which showed up with the output of the results was the c
 	
 	\bibitem{asthmaAfrica} Adeloye, Davies et al. “An Estimate of Asthma Prevalence in Africa: A Systematic Analysis.” Croatian Medical Journal 54.6 (2013): 519–531. PMC. Web. 21 Apr. 2015.
 	
+	\bibitem{machineBioinfo}Larra\~naga, P., Calvo. B., Santana, R., Bielza, C., Galdiano, J., Inza, I., Lozano, J.A., Arma\~nanzas, R., Santaf\'e, G., P\'rez, A. et al. (2006). Machine Learning in Bioinformatics. Briefings in Bioinformatics, 17(1), 86-112.
+	
+	\bibitem{CrossValidation} Stone M. Cross-validatory choice and assessment of statistical predictions. Journal of the Royal Statistical Society Series B 1974;36:111–47.
+	
 	\bibitem{weka} Ian H. Witten, Eibe Frank, Len Trigg, Mark Hall Geoffrey Holmes, and Sally Jo Cunningham. Weka: Practical machine learning tools and techniques with java implementations. Department of Computer Science. University of Waikato. New Zealand.
+	
+	\bibitem{ROC} Green DM, Swets JA. Signal Detection Theory and Psychophysics. Wiley, 1974.
 	
 	
 \end{thebibliography}
