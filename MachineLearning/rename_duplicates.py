@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*
 # Made by Jose Alejandro Romero Herrera
 import re
-f=open("final.arff")
-o=open("final2.arff","a")
+f=open("GSE63142.arff")
+o=open("GSE63142_noDupplicates.arff","a")
 lines={}
 for line in f:
   if lines.has_key(line):

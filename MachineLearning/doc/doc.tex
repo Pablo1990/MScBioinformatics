@@ -81,27 +81,56 @@ We've used several paradigms (classifiers) to see which could be fitted more to 
 
 \subsubsection{Naive Bayes}
 
+It is built upon the assumption of conditional independence of the predictive variables given the class. 
+
+\begin{equation}
+	c^* = \arg \max_c p(C=c) \prod_{i=1}^{n} p(X_i = x_i|C = C)
+	\label{eq:naive}
+\end{equation}
+
+Which is the reduced formula of this one:
+
+\begin{equation}
+	\gamma(x) = \arg \min_k \sum_{c=1}^{r_0} co (k,c) p(c| x_1,\dots, x_n)
+	\label{eq:bayes}
+\end{equation}
+
+, in which every variable depends on all other and the complexity of the algorithm is too complicated. Naive Bayes (Equation:\ref{eq:bayes}) gives an approximate result, by reducing the dependencies between each variable, and it comes, also, with a time-relaxed version of the algorithm.
+
 \subsubsection{KNN, K-nearest neighbours (IBk)}
 
-The nearest-neighbour rule [75] to classify x is to asign it to the label associated with the prototype nearest to the test point (Figure 6). An obvious extension of the nearest-neighbour rule is the k-nearest-neighbour rule. This rule classifies x by assigning it to the label most frequently represented among the k nearest samples. In other words, a decision is made by examining the labels on the k-nearest-neighbours and voting.
-A practical problem with this simple method is that it tends to be slow for large training sets because the entire set must be searched for each test instance. A strategy to avoid the computational complexity of the nearest neighbour algorithm is to classify each example with respect to the examples already seen and to save only those that are misclassified. This strategy is known as condensing.
+Imagine a classification problem, in which you have to divide in (known) classes, seeing only a surface with points and crosses. A way to do that, is starting in one of them and going through all of them and
+classify each one by assigning it to the label most frequently represented among the k nearest samples. And you'll have solved the problem by k-nearest neighbours.
 
 \subsubsection{Decision tree: C4.5 (j48)}
 
+The decision tree is as simple as get a tree in which all the leaf nodes are classes and the inner nodes are decision parameters that will help us to determinate whether is one class or another (in the case, there are just two classes). The particularity of C4.5\cite{c45} is that the decision parameters are obtained via information gained ratio:
 
+\begin{equation}
+	I(X_i,C)/H(X_i)
+\end{equation}
 
 \subsubsection{Logistic regression}
 
+It is based on the logistic function: $f(z) = 1 \frac{1}{1+e{-z}}$. So the equation used here is:
 
 \begin{equation}
 	P(C = 1 | x) = \frac{1}{1 + e^{-(\beta_{0} + \Sigma^{n}_{i=1} \beta_{i} x_{i})}}
 	\label{eq:logistic}
 \end{equation}
 
-Where $x$ represents an instance to be classified, and $\beta_0, \beta_1, \dots , \beta_n$ are the parameters of the model. These parameters should be estimated from the data in order to obtain a concrete model.
+where $x$ represents an instance to be classified, and $\beta_0, \beta_1, \dots , \beta_n$ are the parameters of the model. These parameters should be estimated from the data in order to obtain a concrete model.
 
 \subsubsection{Bayesian Networks, TAN}
 
+TAN is based on the mutual information of each variable (or group of variables) with everyone and trying to maximize this number choosing the right variables. So, the mutual information between two variables is given by:
+
+\begin{equation}
+	I(X,Y) = \sum_{i=1}^{r_x}\sum_{j=1}^{r_y} p(x_i, y_j) log \frac{p(x_i,y_j)}{p(x_i)p(y_j)}
+	\label{eq:tan}
+\end{equation}
+
+it measures the reduction of uncertainty of one variable knowing the other one. So, the algorithm consists in building the tree of the variables or group of variables, order by the information gained, which are maximum at this mutual information, until all of the next combinations of variables would not increase the mutual information gained by the last group.
 
 \subsection{Complementary}
 
@@ -201,17 +230,17 @@ We had these problems mentioned before because the initial dataset had, approxim
 \end{table}
 
 \begin{table}[h]
-	\caption{Best results on the complementary methods.}
+	\caption{Best results on the complementary methods. *: Search method: best first; $\dagger$: Search method: Genetic.}
 	\centering
 	\begin{tabular}{c r r r r r r}
 		\hline\hline
 		& & \multicolumn{2}{c|}{FSS} & \multicolumn{3}{c}{Filtered by gain ratio}\\
-		Method & No filter & Univariate & \multicolumn{1}{c|}{CFS} & CFS & CFS (genetic) & Wrapper\\ [0.2ex]
+		Method& None& Univariate& \multicolumn{1}{c|}{CFS*}& CFS*& CFS$\dagger$ & Wrapper\\ [0.2ex]
 		%heading
 		\hline
-		Adaboost (random forest) & 0.573 & 0.801 & 0.795 & 0.798 & 0.829 & 0.835 \\
+		Adaboost(randomForest) & 0.573 & 0.801 & 0.795 & 0.798& 0.829 & 0.835 \\
 		Adaboost (J48) & 0.544 & 0.758 & 0.736 & 0.736 & 0.8 & X \\
-		Multilayer perceptron & X* & 0.788 & 0.792 & 0.778 & 0.697 & 0.83 \\
+		Multilayer perceptron & X & 0.788 & 0.792 & 0.778 & 0.697 & 0.83 \\
 		RBF Network & 0.393 & 0.675 & 0.726 & 0.726 & 0.693 & X\\
 		Random forest & 0.569 & 0.811 & 0.783 & 0.803 & 0.809 & 0.843 \\ [1ex]
 		\hline
@@ -270,6 +299,10 @@ Another important thing which showed up with the output of the results was the c
 	\bibitem{machineBioinfo}Larra\~naga, P., Calvo. B., Santana, R., Bielza, C., Galdiano, J., Inza, I., Lozano, J.A., Arma\~nanzas, R., Santaf\'e, G., P\'rez, A. et al. (2006). Machine Learning in Bioinformatics. Briefings in Bioinformatics, 17(1), 86-112.
 	
 	\bibitem{CrossValidation} Stone M. Cross-validatory choice and assessment of statistical predictions. Journal of the Royal Statistical Society Series B 1974;36:111–47.
+	
+	\bibitem{naiveBayes} Minsky M. Steps toward artificial intelligence. Transactionson Institute of Radio Engineers 1961;49:8–30.
+	
+	\bibitem{c45}Quinlan R. C4.5: Programs for Machine Learning. Morgan Kaufmann, 1993.
 	
 	\bibitem{weka} Ian H. Witten, Eibe Frank, Len Trigg, Mark Hall Geoffrey Holmes, and Sally Jo Cunningham. Weka: Practical machine learning tools and techniques with java implementations. Department of Computer Science. University of Waikato. New Zealand.
 	
