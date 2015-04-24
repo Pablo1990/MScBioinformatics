@@ -146,19 +146,19 @@ There are many variants on the idea of boosting. We describe a widely used metho
 
 \subsubsection{Multilayer perceptron}
 
-Section 4.6 explained that a perceptron represents a hyperplane in instance space. We mentioned there that it is sometimes described as an artificial “neuron.” Of course, human and animal brains successfully undertake very complex classification tasks—for example, image recognition. The functional- ity of each individual neuron in a brain is certainly not sufficient to perform these feats. How can they be solved by brain-like structures? The answer lies in the fact that the neurons in the brain are massively interconnected, allowing a problem to be decomposed into subproblems that can be solved at the neuron level. This observation inspired the development of networks of artificial neurons—neural nets.
-Consider the simple datasets in Figure 6.10. Figure 6.10(a) shows a two- dimensional instance space with four instances that have classes 0 and 1, repre- sented by white and black dots, respectively. No matter how you draw a straight line through this space, you will not be able to find one that separates all the black points from all the white ones. In other words, the problem is not linearly separable, and the simple perceptron algorithm will fail to generate a separat- ing hyperplane (in this two-dimensional instance space a hyperplane is just a straight line). The situation is different in Figure 6.10(b) and Figure 6.10(c): both these problems are linearly separable. The same holds for Figure 6.10(d), which shows two points in a one-dimensional instance space (in the case of one dimension the separating hyperplane degenerates to a separating point).
-If you are familiar with propositional logic, you may have noticed that the four situations in Figure 6.10 correspond to four types of logical connectives. Figure 6.10(a) represents a logical XOR, where the class is 1 if and only if exactly one of the attributes has value 1. Figure 6.10(b) represents logical AND, where the class is 1 if and only if both attributes have value 1. Figure 6.10(c) repre- sents OR, where the class is 0 only if both attributes have value 0. Figure 6.10(d) represents NOT, where the class is 0 if and only if the attribute has value 1. Because the last three are linearly separable, a perceptron can represent AND, OR, and NOT. Indeed, perceptrons for the corresponding datasets are shown in Figure 6.10(f) through (h) respectively. However, a simple perceptron cannot represent XOR, because that is not linearly separable. To build a classifier for this type of problem a single perceptron is not sufficient: we need several of them.
+If the data can be separated perfectly into two groups using a hyperplane, it is said to be linearly separable. It turns out that if the data is linearly separable, there is a very simple algorithm for finding a separating hyperplane. This algorithm is the perceptron. And in this case the multilayer perceptron has a very similar approach to the neural net. It also has hidden layers and has to learn the weights of every inputs perceptron. 
 
 \subsubsection{RBF Network}
 
 Other kernel functions can be used instead to implement different nonlinear mappings. Two that are often suggested are the radial basis function (RBF) kernel and the sigmoid kernel. Which one produces the best results depends on the application, although the differences are rarely large in practice. It is interesting to note that a support vector machine with the RBF kernel is simply a type of neural network called an RBF network (which we describe later)
 
-\subsection{Filter selection subset}
+\subsection{Feature subset selection}
 
-Bioinformatics-2007-Saeys.pdf
+One of the main problems of the machine learning algorithms is the complexity problem. You usually get stacked because the algorithms require time and resources, and, very frequently, a lot of each one. So, one of the solution that could be provided is the FSS (feature subset selection). Mainly, FSS reduces the number of variables (or parameters) of our dataset, and the dimensionality associated. Which transform our dataset into a easy one or easier, at least. There three approaches, and we're going to explain each one, in the few next sections.
 
 \subsubsection{Univariate}
+
+
 
 \subsubsection{Multivariate}
 
