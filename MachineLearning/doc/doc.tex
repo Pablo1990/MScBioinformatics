@@ -134,35 +134,47 @@ it measures the reduction of uncertainty of one variable knowing the other one. 
 
 \subsection{Complementary}
 
-book wittenyfrank.pdf
+\subsubsection{Random forest \cite{RandomForest}}
 
-\subsubsection{Random forest}
+Random forests are a combination of tree predictors such that each tree depends on the values of a random vector sampled independently and with the same distribution for all trees in the forest. The  generalization error for forests converges a.s. to a limit as the number of trees in the forest becomes large. The generalization error of a forest of tree classifiers depends on the strength of the individual trees in the forest and the correlation between them.
 
-RandomForest constructs random forests by bagging ensembles of random trees
+\subsubsection{Adaboost.M1 \cite{Adaboost}}
 
-\subsubsection{Adaboost}
-
-There are many variants on the idea of boosting. We describe a widely used method called AdaBoost.M1 that is designed specifically for classification. Like bagging, it can be applied to any classification learning algorithm. To simplify matters we assume that the learning algorithm can handle weighted instances, where the weight of an instance is a positive number. (We revisit this assump- tion later.) The presence of instance weights changes the way in which a classi- fier’s error is calculated: it is the sum of the weights of the misclassified instances divided by the total weight of all instances, instead of the fraction of instances that are misclassified.
+It is a boosting algorithm that can be used to significantly reduce the error of any learning algorithm that consistently generates classifiers whose performance is a little better than random guessing. It consists in obtain the algorithm of a "weak learner", such as a random line to divide two classes, and combined their outputs into a weighted sum that represents the final output of the boosted classifier.
 
 \subsubsection{Multilayer perceptron}
 
-If the data can be separated perfectly into two groups using a hyperplane, it is said to be linearly separable. It turns out that if the data is linearly separable, there is a very simple algorithm for finding a separating hyperplane. This algorithm is the perceptron. And in this case the multilayer perceptron has a very similar approach to the neural net. It also has hidden layers and has to learn the weights of every inputs perceptron. 
+If the data can be separated perfectly into two groups using a hyperplane, it is said to be linearly separable \cite{DataMining}. It turns out that if the data is linearly separable, there is a very simple algorithm for finding a separating hyperplane. This algorithm is the perceptron. And in this case the multilayer perceptron, it's an specific case of a neural net. It uses the sigmoid function instead of another one. The sigmoid function is defined by:
+
+\begin{equation}
+\frac{1}{1+e^{-x}}
+\end{equation}
 
 \subsubsection{RBF Network}
 
-Other kernel functions can be used instead to implement different nonlinear mappings. Two that are often suggested are the radial basis function (RBF) kernel and the sigmoid kernel. Which one produces the best results depends on the application, although the differences are rarely large in practice. It is interesting to note that a support vector machine with the RBF kernel is simply a type of neural network called an RBF network (which we describe later)
+Instead of using the sigmoid function, the RBF network uses a radial basis function (RBF). So it is a neural net, but using a RBF kernel. The parameters that such a network learns are the centers and widths of the RBFs and the weights used to form the linear combination of the outputs obtained from the hidden layer. Another difference with the multilayer perceptron is that this network doesn't look for an hyperplane to divide linearly the subjects. The RBF network looks for a hypersphere or hyper	ellipsoid. 
 
-\subsection{Feature subset selection}
+\subsection{Feature subset selection (FSS)}
 
 One of the main problems of the machine learning algorithms is the complexity problem. You usually get stacked because the algorithms require time and resources, and, very frequently, a lot of each one. So, one of the solution that could be provided is the FSS (feature subset selection). Mainly, FSS reduces the number of variables (or parameters) of our dataset, and the dimensionality associated. Which transform our dataset into a easy one or easier, at least. There three approaches, and we're going to explain each one, in the few next sections.
 
 \subsubsection{Univariate}
 
+It is based in evaluate each feature separately, thereby ignoring feature dependencies \cite{Univariate}. In our case we use the gain ratio, evaluating the worth of an attribute by measuring the gain ratio with respect to the class. Which is defined by:
 
+\begin{equation}
+	G(Class, Attribute) = \frac{(H(Class) - H(Class | Attribute))}{H(Attribute)}
+\end{equation}
+
+where $H$ means the mutual information.
 
 \subsubsection{Multivariate}
 
-\subsubsection{Wrapper}
+We use CFS (Correlation-based feature selection \cite{CFS}), it differs from univariate FSS in the part of the redundancy. It also looks for redundant features and ignore them because they will be highly correlated with one or more of the other features. CFS uses a search algorithm along with a function to evaluate the merit of feature subsets like \emph{genetic} algorithm or just a \emph{best first}.
+
+\subsubsection{Wrapper \cite{Wrapper}}
+
+To achieve the best possible performance with a particular learning algorithm on a particular training set, a feature subset selection method should consider how the algorithm and the training set interact. We explore the relation between optimal feature subset selection and relevance. Our wrapper method searches for an optimal feature subset tailored to a particular algorithm and a domain. 
 
 \section{Results}
 
@@ -248,7 +260,6 @@ We had these problems mentioned before because the initial dataset had, approxim
 	\label{table:complementaryResults}
 \end{table}
 
-%Mostrar la clasificación entre los bien clasificados de una y otra clase, porque así se podrá ver, que una clase es más fácil de clasificar que otra.
 
 Another important thing which showed up with the output of the results was the classification between one class and the other ones.
 
@@ -296,13 +307,25 @@ Another important thing which showed up with the output of the results was the c
 	
 	\bibitem{asthmaAfrica} Adeloye, Davies et al. “An Estimate of Asthma Prevalence in Africa: A Systematic Analysis.” Croatian Medical Journal 54.6 (2013): 519–531. PMC. Web. 21 Apr. 2015.
 	
-	\bibitem{machineBioinfo}Larra\~naga, P., Calvo. B., Santana, R., Bielza, C., Galdiano, J., Inza, I., Lozano, J.A., Arma\~nanzas, R., Santaf\'e, G., P\'rez, A. et al. (2006). Machine Learning in Bioinformatics. Briefings in Bioinformatics, 17(1), 86-112.
+	\bibitem{machineBioinfo}\~naga, P., Calvo. B., Santana, R., Bielza, C., Galdiano, J., Inza, I., Lozano, J.A., Arma\~nanzas, R., Santaf\'e, G., P\'rez, A. et al. (2006). Machine Learning in Bioinformatics. Briefings in Bioinformatics, 17(1), 86-112.
 	
 	\bibitem{CrossValidation} Stone M. Cross-validatory choice and assessment of statistical predictions. Journal of the Royal Statistical Society Series B 1974;36:111–47.
 	
 	\bibitem{naiveBayes} Minsky M. Steps toward artificial intelligence. Transactionson Institute of Radio Engineers 1961;49:8–30.
 	
 	\bibitem{c45}Quinlan R. C4.5: Programs for Machine Learning. Morgan Kaufmann, 1993.
+	
+	\bibitem{RandomForest} Breiman L., Random Forests. Machine Learning. 45(1); 5-32. 2001.
+	
+	\bibitem{DataMining} Witten I, Frank E, Hall M (2011) Data mining: practical machine learning tools and techniques, 3rd edn. Morgan Kaufmann, Burlington
+	
+	\bibitem{Adaboost} Freund Y., Schapire R.E.: Experiments with a new boosting algorithm, 13th International Conference on Machine Learning, 148-156, 1996
+	
+	\bibitem{Univariate} Saeys Y., Inza I., and Larra\~naga P., A review of feature selection techniques in bioinformatics, Bioinformatics (2007) 23 (19): 2507-2517 first published online August 24, 2007, doi:10.1093/bioinformatics/btm344
+	
+	\bibitem{CFS} Hall, M. A. 1998. Correlation-based Feature Selection for Machine Learning. Ph.D diss. Dept. of Computer Science, Waikato Univ.
+	
+	\bibitem{Wrapper}Kohavi R, John G. Wrappers for feature subset selection. Artificial Intelligence 1997;97(1–2):273–324.
 	
 	\bibitem{weka} Ian H. Witten, Eibe Frank, Len Trigg, Mark Hall Geoffrey Holmes, and Sally Jo Cunningham. Weka: Practical machine learning tools and techniques with java implementations. Department of Computer Science. University of Waikato. New Zealand.
 	
