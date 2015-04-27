@@ -188,7 +188,7 @@ In this section we'll show all the results we get from the expression set used. 
 	\caption{*: The X values means no results could be obtained due to computational problems. **The K used here is equal to one.}
 	\centering
 	\begin{tabular}{c r r r r}
-		\hline\hline
+		\hline
 		& & \multicolumn{3}{|c}{FSS} \\
 		Method & No filter & \multicolumn{1}{|c}{Univariate} & Multivariate & Wrapper\\ [0.2ex]
 		%heading
@@ -288,7 +288,7 @@ Another important thing which showed up with the output of the results was the c
 \subsection{GSE63142}
 
 \begin{table}[h]
-	\caption{*: The X values means no results could be obtained due to computational problems. **:The K used here is equal to one. $dagger$: with random forest.}
+	\caption{*: The X values means no results could be obtained due to computational problems. **:The K used here is equal to one. $\dagger$: with random forest.}
 	\centering
 	\begin{tabular}{c r r r r}
 		\hline\hline
@@ -302,7 +302,7 @@ Another important thing which showed up with the output of the results was the c
 		Decision Tree & 0.588 & 0.619 & 0.709 & 0.X\\
 		Bayesian Net & X* & 0.657 & 0.663 & X* \\
 		Random forest & 0.575 & 0.841 & 0.808 & X*\\
-		Multilayer perceptron & X & 0.857 & 0.824 & X\\
+		Multilayer perceptron* & X & 0.857 & 0.824 & X\\
 		Adaboost$\dagger$ & 0.521 & 0.835 & 0.821 & X\\ [1ex]
 		\hline
 	\end{tabular}
@@ -310,7 +310,7 @@ Another important thing which showed up with the output of the results was the c
 \end{table}
 
 \begin{table}[h]
-	\caption{*: K equals to 4; ** K equals to 1.}
+	\caption{}
 	\centering
 	\begin{tabular}{c r r r}
 		\hline\hline
@@ -318,11 +318,14 @@ Another important thing which showed up with the output of the results was the c
 		Method & CFS Best first & CFS Genetic & Wrapper\\ [0.2ex]
 		%heading
 		\hline
-		Naive Bayes & 0.623 & 0.599 & 0.74 \\
-		KNN & 0.773* & 0.674* & 0.687** \\
-		Logistic & 0.699 & 0.675 & 0.824 \\
-		Decision Tree & 0.668 & 0.76 & 0.641 \\
-		Bayesian Net & 0.667 & 0.674 & 0.678 \\ [1ex]
+		KNN (K=1) & 0.607 & 0.665 & 0.727 \\
+		Naive bayes & 0,729 0,692 0,815 \\
+		Logistic & 0,768 0,69 0,834 \\
+		Decision Tree & 0,714 0,656 0,708 \\
+		Bayesian Net & 0,792 0,796 0,787 \\
+		Random forest & 0,829 0,791 0,813\\
+		Multilayer perceptron & 0,821 0,85 0,764\\
+		Adaboost$\dagger$ & 0,82 0,82 0,799\\ [1ex]
 		\hline
 	\end{tabular}
 	\label{table:filteredResults63142}
