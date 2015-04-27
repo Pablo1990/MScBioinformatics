@@ -182,22 +182,25 @@ To achieve the best possible performance with a particular learning algorithm on
 
 In this section we'll show all the results we get from the expression set used. The software used to get all of those results is weka \cite{weka}. And all of the results are compared by the ROC curve \cite{ROC}, which is a trusty measure.
 
+\subsection{GSE43696}
+
 \begin{table}[h]
-\caption{*: The X values means no results could be obtained due to computational problems. **The K used here is equal to one.}
-\centering
-\begin{tabular}{c r r r r}
-\hline\hline
- & & \multicolumn{3}{|c}{FSS} \\
-Method & No filter & \multicolumn{1}{|c}{text}Univariate & Multivariate & Wrapper\\ [0.2ex]
-%heading
-\hline
-Naive Bayes & 0.436 & 0.626 & 0.623 & 0.731 \\
-KNN** & 0.594 & 0.644 & 0.67 & 0.781 \\
-Logistic &  X* & 0.731 & 0.7 & 0.793\\
-Decision Tree & 0.486 & 0.639 & 0.698 & 0.641\\
-Bayesian Net & X* & 0.657 & 0.663 & X* \\ [1ex]
-\hline
-\end{tabular}
+	\caption{*: The X values means no results could be obtained due to computational problems. **The K used here is equal to one.}
+	\centering
+	\begin{tabular}{c r r r r}
+		\hline\hline
+		& & \multicolumn{3}{|c}{FSS} \\
+		Method & No filter & \multicolumn{1}{|c}{Univariate} & Multivariate & Wrapper\\ [0.2ex]
+		%heading
+		\hline
+		Naive Bayes & 0.436 & 0.626 & 0.623 & 0.731 \\
+		KNN** & 0.594 & 0.644 & 0.67 & 0.781 \\
+		Logistic &  X* & 0.731 & 0.7 & 0.793\\
+		Decision Tree & 0.486 & 0.639 & 0.698 & 0.641\\
+		Bayesian Net & X* & 0.657 & 0.663 & X* \\ [1ex]
+		\hline
+	\end{tabular}
+	
 \label{table:basicsResults}
 \end{table}
 
@@ -282,6 +285,48 @@ Another important thing which showed up with the output of the results was the c
 	\label{table:inClassResults}
 \end{table}
 
+\subsection{GSE63142}
+
+\begin{table}[h]
+	\caption{*: The X values means no results could be obtained due to computational problems. **:The K used here is equal to one. $dagger$: with random forest.}
+	\centering
+	\begin{tabular}{c r r r r}
+		\hline\hline
+		& & \multicolumn{3}{|c}{FSS} \\
+		Method & No filter & \multicolumn{1}{|c}{Univariate} & Multivariate & Wrapper\\ [0.2ex]
+		%heading
+		\hline
+		KNN** & 0.577 & 0.631 & 0.607 & 0.X \\
+		Naive bayes & 0.508 & 0.661 & 0.729 & 0.694 \\
+		Logistic &  X* & 0.739 & 0.768 & 0.843\\
+		Decision Tree & 0.588 & 0.619 & 0.709 & 0.X\\
+		Bayesian Net & X* & 0.657 & 0.663 & X* \\
+		Random forest & 0.575 & 0.841 & 0.808 & X*\\
+		Multilayer perceptron & X & 0.857 & 0.824 & X\\
+		Adaboost$\dagger$ & 0.521 & 0.835 & 0.821 & X\\ [1ex]
+		\hline
+	\end{tabular}
+	\label{table:basicsResults63142}
+\end{table}
+
+\begin{table}[h]
+	\caption{*: K equals to 4; ** K equals to 1.}
+	\centering
+	\begin{tabular}{c r r r}
+		\hline\hline
+		& \multicolumn{2}{c}{Multivariate} & \\
+		Method & CFS Best first & CFS Genetic & Wrapper\\ [0.2ex]
+		%heading
+		\hline
+		Naive Bayes & 0.623 & 0.599 & 0.74 \\
+		KNN & 0.773* & 0.674* & 0.687** \\
+		Logistic & 0.699 & 0.675 & 0.824 \\
+		Decision Tree & 0.668 & 0.76 & 0.641 \\
+		Bayesian Net & 0.667 & 0.674 & 0.678 \\ [1ex]
+		\hline
+	\end{tabular}
+	\label{table:filteredResults63142}
+\end{table}
 
 
 \section{Discussion}
