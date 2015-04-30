@@ -174,7 +174,7 @@ We use CFS (Correlation-based feature selection \cite{CFS}), it differs from uni
 
 \subsubsection{Wrapper \cite{Wrapper}}
 
-To achieve the best possible performance with a particular learning algorithm on a particular training set, a feature subset selection method should consider how the algorithm and the training set interact. We explore the relation between optimal feature subset selection and relevance. Our wrapper method searches for an optimal feature subset tailored to a particular algorithm and a domain. 
+To achieve the best possible performance with a particular learning algorithm on a specific training set, a feature subset selection method should consider how the algorithm and the training set interact. We explore the relation between optimal feature subset selection and relevance. Our wrapper method searches for an optimal feature subset tailored to a particular algorithm and a domain. 
 
 \section{Results}
 
@@ -336,9 +336,11 @@ As we can see in Table \ref{table:basicsResults63142} and \ref{table:filteredRes
 
 \subsection{Important genes}
 
-The genes obtained by FSS are, as seen by the results, at least, important to discriminate between the several classes in each dataset. But, we do different fss in which every of them, we get diverse genes.
+The probes obtained by FSS are, as seen by the results, at least, important to discriminate between the several classes in each dataset. But, we do different fss in which every of them, we get diverse probes. Of course, not every probe is associated with a gene.
 
-In order to find
+In order to find these genes we'll get the probes from the ARFF files received by the FSS results. When we have the genes, we compare all the genes from each operation of filter (Cfs, information gain ratio, wrapper). If a gene is obtained in various filters from different datasets, we'll add to a list of relevant genes. 
+
+After obtained all the important genes from our datasets and classifiers, we'll look for information about them.
 
 \section{Discussion}
 
