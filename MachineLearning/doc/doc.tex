@@ -48,7 +48,7 @@ But it's not just a problem of the (illogically) called "first world". It also a
 
 \subsection{Dataset}
 
-The dataset chosen is the one used by Voraphani N. (2014)\cite{voraphani2014}, in which the main purpose was to identify differentially expressed genes. These genes belongs to different subjects with different classes:
+The dataset chosen is the one used by Voraphani N. (2014)\cite{voraphani2014}, in which the main purpose was to identify differentially expressed genes. These genes belongs to various subjects with different classes:
 
 \begin{itemize}
 	\item Control: Subjects with no asthma.
@@ -73,7 +73,7 @@ Why machine learning \& statistics and not other methods? Well, machine learning
 
 \subsection{Supervised classification}
 
-In a classification problem, we have a set of elements divided into classes \cite{machineBioinfo}. Given an element (or instance) of the set, a class is assigned according to some of the element's features and a set of classification rules. In our case, we have three classes (Control, MMA, SA) and 108 instances (subjects with asthma or not). Our subjects are labelled with their own class. So we proceed to divide the dataset in two subsets: the training dataset and the test dataset. The training one will be the input (labelled as well) of the classifier. The classifier learn to classify this training dataset, and the output will be a model. With this model, we run again the classifier, but, at this time, we input the test dataset without labels (i.e. no classes). After all of this procedure, we'll obtain a percentage of how good is our classifier.
+In a classification problem, we have a set of elements divided into classes \cite{machineBioinfo}. Given an element (or instance) of the set, a class is assigned according to some of the element's features and a set of classification rules. In our case, we have three classes (Control, MMA, SA) and 108 instances (subjects with asthma or not). Our cases are labelled with their own class. So we proceed to divide the dataset in two subsets: the training dataset and the test dataset. The training one will be the input (labelled as well) of the classifier. The classifier learn to classify this training dataset, and the output will be a model. With this model, we run again the classifier, but, at this time, we input the test dataset without labels (i.e. no classes). After all of this procedure, we'll obtain a percentage of how good is our classifier.
 
 In order to reduce the bias with the division of the dataset (in training and test), we'll execute the k-fold-cross-validation \cite{CrossValidation}. In this case, the dataset is partitioned into k folds. Each fold is left out of the design process and used as a testing set. The estimate of the error is the overall proportion of the errors committed on all folds.
 
@@ -119,7 +119,7 @@ It is based on the logistic function: $f(z) = 1 \frac{1}{1+e{-z}}$. So the equat
 	\label{eq:logistic}
 \end{equation}
 
-where $x$ represents an instance to be classified, and $\beta_0, \beta_1, \dots , \beta_n$ are the parameters of the model. These parameters should be estimated from the data in order to obtain a concrete model.
+where $x$ represents an instance to be classified, and $\beta_0, \beta_1, \dots , \beta_n$ are the parameters of the model. These factor should be estimated from the data in order to obtain a concrete model.
 
 \subsubsection{Bayesian Networks, TAN}
 
@@ -130,7 +130,7 @@ TAN is based on the mutual information of each variable (or group of variables) 
 	\label{eq:tan}
 \end{equation}
 
-it measures the reduction of uncertainty of one variable knowing the other one. So, the algorithm consists in building the tree of the variables or group of variables, order by the information gained, which are maximum at this mutual information, until all of the next combinations of variables would not increase the mutual information gained by the last group.
+it measures the reduction of uncertainty of one variable knowing the other one. So, the algorithm consists in building the tree of the variables or group of variables, order by the knowledge gained, which are maximum at this mutual information, until all of the next combinations of variables would not increase the mutual information gained by the last group.
 
 \subsection{Complementary}
 
@@ -144,7 +144,7 @@ It is a boosting algorithm that can be used to significantly reduce the error of
 
 \subsubsection{Multilayer perceptron}
 
-If the data can be separated perfectly into two groups using a hyperplane, it is said to be linearly separable \cite{DataMining}. It turns out that if the data is linearly separable, there is a very simple algorithm for finding a separating hyperplane. This algorithm is the perceptron. And in this case the multilayer perceptron, it's an specific case of a neural net. It uses the sigmoid function instead of another one. The sigmoid function is defined by:
+If the data can be separated perfectly into two groups using a hyperplane, it is said to be linearly separable \cite{DataMining}. It turns out that if the data is linearly separable, there is a very simple algorithm for finding a separating hyperplane. This formula is the perceptron. And in this case the multilayer perceptron, it's an specific case of a neural net. It uses the sigmoid function instead of another one. The sigmoid function is defined by:
 
 \begin{equation}
 \frac{1}{1+e^{-x}}
@@ -332,12 +332,15 @@ In order to confirm our results, we replicate our operations and tests in anothe
 	\label{table:filteredResults63142}
 \end{table}
 
-As we can see in Table \ref{table:basicsResults63142} and \ref{table:filteredResults63142}, the results and performance obtained are approximately the same of the another dataset. So, with all of this results, and seen the performance done after the FSS. We can say that the genes obtained with this filter could be interesting of study. In the next section, we'll discuss about this.
+As we can see in Table \ref{table:basicsResults63142} and \ref{table:filteredResults63142}, the results and performance obtained are approximately the same of the another dataset. So, with all of this results, and seen the performance done after the FSS. We can say that the genes obtained with this filter could be interesting of study. In the later sections, we'll discuss about this.
 
+\subsection{Important genes}
+
+The genes obtained by FSS are, as seen by the results, at least, important to discriminate between the several classes in each dataset. But, we do different fss in which every of them, we get diverse genes.
+
+In order to find
 
 \section{Discussion}
-
-
 
 http://www.ncbi.nlm.nih.gov/pubmed/24720774 - tffs
 http://www.ncbi.nlm.nih.gov/pubmed/24582314 - cpa3 - http://www.ncbi.nlm.nih.gov/pubmed/24313767
