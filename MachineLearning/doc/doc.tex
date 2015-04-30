@@ -1,7 +1,7 @@
 \documentclass[conference,a4paper]{IEEEtran}
 
 %opening
-\title{Computational intelligence and asthma}
+\title{Computational intelligence and asthma: Synaptotagmin XIII (SYT13), possible asthma related gene}
 
 \author{\IEEEauthorblockN{Pablo Vicente-Munuera}
 	\IEEEauthorblockA{Bioinformatics MSc\\
@@ -245,7 +245,7 @@ We had these problems mentioned before because the initial dataset had, approxim
 \end{table}
 
 \begin{table}[h]
-	\caption{Best results on the complementary methods. *: Search method: best first; $\dagger$: Search method: Genetic.}
+	\caption{Best results on the complementary methods. *: Search method: best first; $\dagger$: Search method: Genetic; $\ddagger$: with Random forest}
 	\centering
 	\begin{tabular}{c r r r r r r}
 		\hline\hline
@@ -253,9 +253,9 @@ We had these problems mentioned before because the initial dataset had, approxim
 		Method& None& Univariate& \multicolumn{1}{c|}{CFS*}& CFS*& CFS$\dagger$ & Wrapper\\ [0.2ex]
 		%heading
 		\hline
-		Adaboost(randomForest) & 0.573 & 0.801 & 0.795 & 0.798& 0.829 & 0.835 \\
-		Adaboost (J48) & 0.544 & 0.758 & 0.736 & 0.736 & 0.8 & X \\
-		Multilayer perceptron & X & 0.788 & 0.792 & 0.778 & 0.697 & 0.83 \\
+		Adaboost$\ddagger$ & 0.573 & 0.801 & 0.795 & 0.798& 0.829 & 0.835 \\
+		Adaboost(J48) & 0.544 & 0.758 & 0.736 & 0.736 & 0.8 & X \\
+		MultilayerPerceptron & X & 0.788 & 0.792 & 0.778 & 0.697 & 0.83 \\
 		RBF Network & 0.393 & 0.675 & 0.726 & 0.726 & 0.693 & X\\
 		Random forest & 0.569 & 0.811 & 0.783 & 0.803 & 0.809 & 0.843 \\ [1ex]
 		\hline
@@ -285,6 +285,8 @@ Another important thing which showed up with the output of the results was the c
 \end{table}
 
 \subsection{GSE63142}
+
+In order to confirm our results, we replicate our operations and tests in another dataset of the same type: bronchial epithelial cells, used by Modena et. al. \cite{GSE63142}. 
 
 \begin{table}[h]
 	\caption{*: The X values means no results could be obtained due to computational problems. **:The K used here is equal to one. $\dagger$: with random forest.}
@@ -330,8 +332,12 @@ Another important thing which showed up with the output of the results was the c
 	\label{table:filteredResults63142}
 \end{table}
 
+As we can see in Table \ref{table:basicsResults63142} and \ref{table:filteredResults63142}, the results and performance obtained are approximately the same of the another dataset. So, with all of this results, and seen the performance done after the FSS. We can say that the genes obtained with this filter could be interesting of study. In the next section, we'll discuss about this.
+
 
 \section{Discussion}
+
+
 
 http://www.ncbi.nlm.nih.gov/pubmed/24720774 - tffs
 http://www.ncbi.nlm.nih.gov/pubmed/24582314 - cpa3 - http://www.ncbi.nlm.nih.gov/pubmed/24313767
@@ -413,6 +419,8 @@ LTF
 	\bibitem{weka} Ian H. Witten, Eibe Frank, Len Trigg, Mark Hall Geoffrey Holmes, and Sally Jo Cunningham. Weka: Practical machine learning tools and techniques with java implementations. Department of Computer Science. University of Waikato. New Zealand.
 	
 	\bibitem{ROC} Green DM, Swets JA. Signal Detection Theory and Psychophysics. Wiley, 1974.
+	
+	\bibitem{GSE63142} Modena BD, Tedrow JR, Milosevic J, Bleecker ER et al. Gene expression in relation to exhaled nitric oxide identifies novel asthma phenotypes with unique biomolecular pathways. Am J Respir Crit Care Med 2014 Dec 15;190(12):1363-72.
 	
 	
 \end{thebibliography}
