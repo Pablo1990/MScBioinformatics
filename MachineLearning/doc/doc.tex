@@ -346,7 +346,7 @@ After obtained all the important genes from our datasets and classifiers, we'll 
 This could be confirmed seeing the table \ref{table:OverallFilters}.  
 
 \begin{table}[h]
-	\caption{An overall view of which filter is better and the average with the results of the two datasets.}
+	\caption{An overall view of which filter is better and the average with the results of the two datasets}
 	\centering
 	\begin{tabular}{c r r}
 		\hline\hline
@@ -365,14 +365,18 @@ This could be confirmed seeing the table \ref{table:OverallFilters}.
 	\label{table:OverallFilters}
 \end{table}
 
-We could see there is too noise, and this could logical, thinking of how the diseases works: There are not a few genes that works out to produce the disease, it's a bunch of them, but not all of them. There are important genes and irrelevant ones. So, these filters are biological consistent.
+We could see there is so much noise, and this could logical, thinking of how the diseases works: there are not only a few genes that works out to produce the disease, it's a bunch of them, but not all of them. There are important genes and irrelevant ones. Therefore, as seen before with the results of with and without, these FSS's are biological consistent, in those particular datasets.
 
 \section{Discussion}
 
+We showed every result related to the classify problem we are trying to solve. So, the next step, is select the best classifiers. In the table \ref{table:OverallMethods}, we reveal the best of them.
+
 \subsection{Which are the best classifiers?}
 
+Our best classifier seems to be random forest, but, multilayer perceptron and adaboost are quite similar. But that's not the best part. We obtain several 0.82's or more in various classifications with those classifiers. An area under the curve percentage of 0.85 is a great performance (seen at table \ref{table:basicsResults63142}) 
+
 \begin{table}[h]
-	\caption{Results depending the K value on the KNN classifier}
+	\caption{Average results of the classifiers}
 	\centering
 	\begin{tabular}{c r}
 		\hline\hline
@@ -433,6 +437,8 @@ LTF
 %The genes discovered.
 
 %\section{Conclusion} is it necessary?
+
+As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen related to asthma. 
 
 \begin{thebibliography}{1}
 	
