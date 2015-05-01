@@ -11,6 +11,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{multirow}
+\usepackage[pdftex]{graphicx}
 
 \begin{document}
 
@@ -398,47 +399,65 @@ Our best classifier seems to be random forest, but, multilayer perceptron and ad
 
 \subsection{Where are my genes?}
 
+Once we obtain good performance, we'll look for the genes associated with these good results. We put together all the genes obtained with the filters and ranked with their occurrences.
+
+\begin{table}[h]
+	\caption{Ranked genes with a threshold of 6}
+	\centering
+	\begin{tabular}{r c}
+		\hline\hline
+		Occurences & Genes\\ [0.2ex]
+		%heading
+		\hline
+		14 & CPA3 \\
+		13 & SCGB1A1 \\
+		12 & SPP1 \\
+		12 & C12orf39 \\
+		10 & WNK4 \\
+		10 & TFF3 \\
+		10 & FCER1A \\
+		9 & TDRD5 \\
+		8 & KIAA1875 \\
+		8 & IL1R2 \\
+		8 & FKBP5 \\
+		8 & C20orf46 \\
+		7 & VEGFA \\
+		7 & PMEPA1 \\
+		7 & COL1A1 \\
+		7 & CEACAM7 \\
+		7 & CEACAM5 \\
+		6 & USP29 \\
+		6 & SYT13 \\
+		6 & LRRC71 \\
+		6 & CIRBP \\
+		6 & C7orf26 \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:Genes-Occurrences}
+\end{table}
+
+Explain a little of cpa3
+
 http://www.ncbi.nlm.nih.gov/pubmed/24720774 - tffs
 http://www.ncbi.nlm.nih.gov/pubmed/24582314 - cpa3 - http://www.ncbi.nlm.nih.gov/pubmed/24313767
-
+http://www.ncbi.nlm.nih.gov/pubmed/22276228 - spp1
+http://www.ncbi.nlm.nih.gov/pubmed/24777050 - SCGB1A1
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3461899/ - wnk4
+FCER1A - http://www.ncbi.nlm.nih.gov/pubmed/25505553
 syt13 ????  - http://www.ncbi.nlm.nih.gov/gene/57586
 
-response to peptide hormone(GO:0043434)	73	73	List 1: 3.74%
-List 2: 0.03%	
-List 1:
-COL1A1
-TFF3
-LRP5
-EIF2B2
-4.76	7e-8	2e-4
-response to organic substance(GO:0010033)	114	114	List 1: 3.74%
-List 2: 0.05%	
-List 1:
-SCGB1A1
-CTSC
-SPP1
-ADM
+We also proceed to make functional single enrichment with Babelomics and Fatigo \cite{Babelomics}. And came up, with coherent results. It shows one significant GO cellular component: secretory granule(GO:0030141) involving the genes in our list of VEGFA,SCGB1A1,CPA3,COL1A1,TFF3 and LTF. This result with an adjusted p-value of $4.3e-7$ (Fig. \ref{fig:Babelomics}), very convincing.
 
-4.3	4.2e-7	8.1e-4
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{"Babelomics_5"}
+\caption{This figure show how important is the secretory granule measure by the adjusted p-value (FDR). The more red, the better FDR.}
+\label{fig:Babelomics}
+\end{figure}
 
+http://www.jbc.org/content/284/29/19445.full.pdf - could be confirm our suspicions.
 
-secretory granule(GO:0030141)	114	123	List 1: 5.61%
-List 2: 0.05%	
-List 1:
-VEGFA
-SCGB1A1
-CPA3
-COL1A1
-TFF3
-LTF
-
-4.74	4.1e-11	3.7e-8
-
-%The genes discovered.
-
-%\section{Conclusion} is it necessary?
-
-As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen related to asthma. 
+As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen that could be related to asthma. 
 
 \begin{thebibliography}{1}
 	
@@ -482,6 +501,8 @@ As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen related to asthm
 	\bibitem{ROC} Green DM, Swets JA. Signal Detection Theory and Psychophysics. Wiley, 1974.
 	
 	\bibitem{GSE63142} Modena BD, Tedrow JR, Milosevic J, Bleecker ER et al. Gene expression in relation to exhaled nitric oxide identifies novel asthma phenotypes with unique biomolecular pathways. Am J Respir Crit Care Med 2014 Dec 15;190(12):1363-72.
+	
+	\bibitem{Babelomics} Al-Shahrour F, Carbonell J, Minguez P, et al. Babelomics: advanced functional profiling of transcriptomics, proteomics and genomics experiments. Nucleic Acids Research. 2008;36(Web Server issue):W341-W346. doi:10.1093/nar/gkn318.
 	
 	
 \end{thebibliography}
