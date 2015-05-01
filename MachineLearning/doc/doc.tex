@@ -69,7 +69,7 @@ After all of this, we obtain 43377 (without array controls) genes and 108 subjec
 
 \section{Methods}
 
-As said before, the main purpose is classify well and see which genes could contribute more than others We'll analyze these genes so as to see if any of those important genes to our classification problem, have the same relevancy in biology, and, being more specific, in asthma.
+As said before, the main purpose is classify well and see which genes could contribute more than others. We'll analyze these genes so as to see if any of those important genes to our classification problem, have the same relevancy in biology, and, being more specific, in asthma.
 
 Why machine learning \& statistics and not other methods? Well, machine learning and statistics are so powerful. That could be a double-edged sword, but in this case it is not. Although, machine learning, by now, is widely used in the field of bioinformatics and biology.
 
@@ -436,15 +436,7 @@ Once we obtain good performance, we'll look for the genes associated with these 
 	\label{table:Genes-Occurrences}
 \end{table}
 
-Explain a little of cpa3
-
-http://www.ncbi.nlm.nih.gov/pubmed/24720774 - tffs
-http://www.ncbi.nlm.nih.gov/pubmed/24582314 - cpa3 - http://www.ncbi.nlm.nih.gov/pubmed/24313767
-http://www.ncbi.nlm.nih.gov/pubmed/22276228 - spp1
-http://www.ncbi.nlm.nih.gov/pubmed/24777050 - SCGB1A1
-http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3461899/ - wnk4
-FCER1A - http://www.ncbi.nlm.nih.gov/pubmed/25505553
-syt13 ????  - http://www.ncbi.nlm.nih.gov/gene/57586
+Almost each member of the table \ref{table:Genes-Occurrences} are related to asthma, like: TFF3 \cite{TFFs}, SPP1\cite{SPP1}, SCGB1A1 \cite{SCGB1A1}, WN4 \cite{WN4}, FCER1A \cite{FCER1A} and CPA3 \cite{CPA3asthma}, highly important here. The last one of the list, CPA3 gene, encodes a form which is obtained as a binary complex of a procarboxypeptidase A with proproteinase E and functions as a secretory granule metalloexopeptidase. (provided by RefSeq, Jan 2009). Also, when CPA3 increase his expression implies that mast cells are present in the epithelial compartment of patients with mild asthma \cite{MCcells}.
 
 We also proceed to make functional single enrichment with Babelomics and Fatigo \cite{Babelomics}. And came up, with coherent results. It shows one significant GO cellular component: secretory granule(GO:0030141) involving the genes in our list of VEGFA,SCGB1A1,CPA3,COL1A1,TFF3 and LTF. This result with an adjusted p-value of $4.3e-7$ (Fig. \ref{fig:Babelomics}), very convincing.
 
@@ -455,9 +447,9 @@ We also proceed to make functional single enrichment with Babelomics and Fatigo 
 \label{fig:Babelomics}
 \end{figure}
 
-http://www.jbc.org/content/284/29/19445.full.pdf - could be confirm our suspicions.
+The synaptotagmin family is associated with vesicles liberation that can contain factors involved in inflammatory processes \cite{synaptotagmin}, like asthma. Melicoff \emph{et. al.} \cite{melicoff2009}, introduce another member of his family related to inflammatory processes of mast cells, whose were among the first cells associated the pathogenesis of asthma and allergies through type I IgE-mediated hypersensitivity reactions.
 
-As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen that could be related to asthma. 
+As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen that could be related to asthma. Or, at least, it is relevant expressed in bronchial epithelial cells. 
 
 \begin{thebibliography}{1}
 	
@@ -503,6 +495,24 @@ As a conclusion, we propose Synaptotagmin XIII (SYT13) as a gen that could be re
 	\bibitem{GSE63142} Modena BD, Tedrow JR, Milosevic J, Bleecker ER et al. Gene expression in relation to exhaled nitric oxide identifies novel asthma phenotypes with unique biomolecular pathways. Am J Respir Crit Care Med 2014 Dec 15;190(12):1363-72.
 	
 	\bibitem{Babelomics} Al-Shahrour F, Carbonell J, Minguez P, et al. Babelomics: advanced functional profiling of transcriptomics, proteomics and genomics experiments. Nucleic Acids Research. 2008;36(Web Server issue):W341-W346. doi:10.1093/nar/gkn318.
+	
+	\bibitem{synaptotagmin} Colvin RA, Means TK, Diefenbach TJ, et al. Synaptotagmin-mediated vesicle fusion regulates cell migration. Nature immunology. 2010;11(6):495-502. doi:10.1038/ni.1878.
+	
+	\bibitem{melicoff2009} Melicoff E, Sansores-Garcia L, Gomez A, et al. Synaptotagmin-2 Controls Regulated Exocytosis but Not Other Secretory Responses of Mast Cells. The Journal of Biological Chemistry. 2009;284(29):19445-19451. doi:10.1074/jbc.M109.002550.
+	
+	\bibitem{SCGB1A1} C\^ot\'d O, Clark ME, Viel L, et al. Secretoglobin 1A1 and 1A1A Differentially Regulate Neutrophil Reactive Oxygen Species Production, Phagocytosis and Extracellular Trap Formation. Hartl D, ed. PLoS ONE. 2014;9(4):e96217. doi:10.1371/journal.pone.0096217.
+	
+	\bibitem{SPP1} Arjomandi M, Galanter JM, Choudhry S, et al. Polymorphism in Osteopontin Gene (SPP1) Is Associated with Asthma and Related Phenotypes in a Puerto Rican Population. Pediatric Allergy, Immunology, and Pulmonology. 2011;24(4):207-214. doi:10.1089/ped.2011.0095.
+	
+	\bibitem{TFFs} Caroline E. Chwieralski, Ingo Schnurra, Lars Thim, and Werner Hoffmann "Epidermal Growth Factor and Trefoil Factor Family 2 Synergistically Trigger Chemotaxis on BEAS-2B Cells via Different Signaling Cascades", American Journal of Respiratory Cell and Molecular Biology, Vol. 31, No. 5 (2004), pp. 528-537.
+	
+	\bibitem{FCER1A} Tripathi P, Hong X, Caruso D, Gao P, Wang X. Genetic determinants in the development of sensitization to environmental allergens in early childhood. Immunity, Inflammation and Disease. 2014;2(3):193-204. doi:10.1002/iid3.38.
+	
+	\bibitem{WN4} Anagnostopoulou P, Riederer B, Duerr J, et al. SLC26A9-mediated chloride secretion prevents mucus obstruction in airway inflammation. The Journal of Clinical Investigation. 2012;122(10):3629-3634. doi:10.1172/JCI60429.
+	
+	\bibitem{CPA3asthma} Baines K.J., Simpson J.L., Wood L.G., Scott R.J., Fibbens N.L., Powell H. Sputum gene expression signature of 6 biomarkers discriminates asthma inflammatory phenotypes. J Allergy Clin Immunol. 2014;133:997–1007. 
+	
+	\bibitem{MCcells} Fajt, Merritt L., and Sally E. Wenzel. "Mast cells, their subtypes, and relation to asthma phenotypes." Annals of the American Thoracic Society 10.Supplement (2013): S158-S164.
 	
 	
 \end{thebibliography}
